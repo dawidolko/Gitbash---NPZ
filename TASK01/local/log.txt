@@ -1,0 +1,17 @@
+commit 9e5957e3288bf5fc99d629a9e34ae8c00a82bdd9
+Author: Dawid <do125148@stud.ur.edu.pl>
+Date:   Wed Mar 29 02:20:43 2023 +0200
+
+    logi
+
+commit 6bb4e98b23b10bfde36b90b518c24c1bc011a04d
+Author: Dawid <do125148@stud.ur.edu.pl>
+Date:   Wed Mar 29 02:20:12 2023 +0200
+
+    ignorowanie .docx
+
+commit a3ea2e02fd0b0be16e8df83c73ac302106decb5a
+Author: Dawid <do125148@stud.ur.edu.pl>
+Date:   Wed Mar 29 02:18:59 2023 +0200
+
+    ciuchcia

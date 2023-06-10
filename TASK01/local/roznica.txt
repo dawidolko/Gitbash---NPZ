@@ -1,0 +1,18 @@
+diff --git a/lokomotywa.txt b/lokomotywa.txt
+index 5c93880..48c36a1 100644
+--- a/lokomotywa.txt
++++ b/lokomotywa.txt
+@@ -3,7 +3,7 @@ Ciężka, ogromna i pot z niej spływa:
+ Tłusta oliwa.
+ Stoi i sapie, dyszy i dmucha,
+ Żar z rozgrzanego jej brzucha bucha:
+-Buch - jak gorąco!
+-Uch - jak gorąco!
+-Puff - jak gorąco!
+-Uff - jak gorąco!
+\ No newline at end of file
++Buch - jak zimno!
++Uch - jak zimno!
++Puff - jak zimno!
++Uff - jak zimno!
+\ No newline at end of file
