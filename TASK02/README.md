@@ -1,15 +1,11 @@
 # TASK02
-### **1.** 
-Stwórz folder o nazwie zgodnej z imieniem i nazwiskiem, wewnątrz niego folder local, local2 oraz remote.
+### **1.** Stwórz folder o nazwie zgodnej z imieniem i nazwiskiem, wewnątrz niego folder local, local2 oraz remote.
 
-### **2.** 
-Przejdź do folderu local i założyć w nim nowe repozytorium GIT.
+### **2.** Przejdź do folderu local i założyć w nim nowe repozytorium GIT.
 
-### **3.** 
-Przejdź do folderu remote założyć czyste zdalne repozytorium komendą: git init —bare.
+### **3.** Przejdź do folderu remote założyć czyste zdalne repozytorium komendą: git init —bare.
 
-### **4.** 
-Wrócić do local i stworzyć plik o nazwie Cebula.txt i umieścić w nim tekst (polskie znaki nie są konieczne):
+### **4.** Wrócić do local i stworzyć plik o nazwie Cebula.txt i umieścić w nim tekst (polskie znaki nie są konieczne):
 ```
 Co innego cebula.
 Ona nie ma wnętrzności.
