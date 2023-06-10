@@ -1,0 +1,4 @@
+brakuje pliku 'smieci.doc' poniewaz plik '.doc' zostal dodany do '.git' i jest ignorowany przez git > wyjasnienie.txt
+git add wyjasnienie.txt
+
+
