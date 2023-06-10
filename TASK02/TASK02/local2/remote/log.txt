@@ -1,0 +1,11 @@
+commit 26b1d925d7ac07922439f2dc01aa9a4b03aaa400
+Author: nullfresh <dawidolko@outlook.com>
+Date:   Sat Jun 10 13:32:11 2023 +0200
+
+    ignorowanie .doc
+
+commit 60c0fc409a7b29a61d54208d29e17c9b71e8e4a0
+Author: nullfresh <dawidolko@outlook.com>
+Date:   Sat Jun 10 13:31:58 2023 +0200
+
+    cebulka

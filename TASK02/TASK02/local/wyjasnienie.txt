@@ -1,0 +1,1 @@
+Brakuje pliku smieci.doc, ponieważ został dodany do .gitignore i jest ignorowany przez Git.
