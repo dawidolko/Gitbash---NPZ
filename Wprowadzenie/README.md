@@ -2,7 +2,7 @@
 
 ## Spis treści:
 ### 1. Wprowadzenie 
-##  1.1. Linus Torvalds – twórca systemu GIT \
+    1.1. Linus Torvalds – twórca systemu GIT \
   1.2. Najważniejsze cechy GITa \
   1.3. Stany plików w GIT \
   1.4. Terminologia \
