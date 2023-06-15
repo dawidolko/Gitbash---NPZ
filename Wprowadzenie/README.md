@@ -1,15 +1,15 @@
 # System kontroli wersji GIT
 
 ## Spis treści:
-1. Wprowadzenie 2
-1.1. Linus Torvalds – twórca systemu GIT 2
-1.2. Najważniejsze cechy GITa 2
-1.3. Stany plików w GIT 2
-1.4. Terminologia 3
-1.5. Obiekty GITa 3
-1.6. Git Bash 4
-2. Instalacja GITa 4
-3. Konsola Git Bash 11
+### 1. Wprowadzenie 2
+  1.1. Linus Torvalds – twórca systemu GIT 2\
+  1.2. Najważniejsze cechy GITa 2\
+  1.3. Stany plików w GIT 2\
+  1.4. Terminologia 3\
+  1.5. Obiekty GITa 3\
+  1.6. Git Bash 4\
+3. Instalacja GITa 4
+4. Konsola Git Bash 11
 3.1. Konfiguracja GITa 11
 3.2. Rejestrowanie zmian w repozytorium 12
 3.2.1. Sprawdzenie stanu plików w repozytorium 12
