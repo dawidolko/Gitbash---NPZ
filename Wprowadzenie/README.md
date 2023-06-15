@@ -1,33 +1,36 @@
 # System kontroli wersji GIT
 
 ## Spis treści:
-### 1. Wprowadzenie 2
-  1.1. Linus Torvalds – twórca systemu GIT 2\
-  1.2. Najważniejsze cechy GITa 2\
-  1.3. Stany plików w GIT 2\
-  1.4. Terminologia 3\
-  1.5. Obiekty GITa 3\
-  1.6. Git Bash 4\
-3. Instalacja GITa 4
-4. Konsola Git Bash 11
-3.1. Konfiguracja GITa 11
-3.2. Rejestrowanie zmian w repozytorium 12
-3.2.1. Sprawdzenie stanu plików w repozytorium 12
-3.2.2. Śledzenie nowych plików 13
-3.2.3. Dodawanie zmian do poczekalni 14
-3.2.4. Podgląd dokonanych zmian 15
-3.2.5. Zatwierdzanie zmian 16
-3.2.6. Historia zmian 17
-3.3. Rozszerzone mechanizmy 20
-3.3.1. Cofanie zmian 20
-3.3.2. Tagowanie źródeł 21
-3.3.3. Ignorowanie plików 21
-3.4. Gałęzie w Gicie 22
-3.4.1. Rozgałęzienie historii projektu 23
-3.4.2. Scalanie gałęzi (merge) 24
-3.4.3. Konflikty scalania 25
-3.5. Praca ze zdalnym repozytorium [remote] 28
-1. Wprowadzenie
+### 1. Wprowadzenie 
+  1.1. Linus Torvalds – twórca systemu GIT \
+  1.2. Najważniejsze cechy GITa \
+  1.3. Stany plików w GIT \
+  1.4. Terminologia \
+  1.5. Obiekty GITa \
+  1.6. Git Bash \
+### 2. Instalacja GITa \
+### 3. Konsola Git Bash \
+  3.1. Konfiguracja GITa \
+  3.2. Rejestrowanie zmian w repozytorium\
+  3.2.1. Sprawdzenie stanu plików w repozytorium\
+  3.2.2. Śledzenie nowych plików\
+  3.2.3. Dodawanie zmian do poczekalni\
+  3.2.4. Podgląd dokonanych zmian\
+  3.2.5. Zatwierdzanie zmian\
+  3.2.6. Historia zmian\
+  3.3. Rozszerzone mechanizmy\
+  3.3.1. Cofanie zmian\
+  3.3.2. Tagowanie źródeł\
+  3.3.3. Ignorowanie plików\
+  3.4. Gałęzie w Gicie\
+  3.4.1. Rozgałęzienie historii projektu\
+  3.4.2. Scalanie gałęzi (merge)\
+  3.4.3. Konflikty scalania\
+  3.5. Praca ze zdalnym repozytorium [remote]\
+
+  
+## 1. Wprowadzenie
+
 System kontroli wersji (ang. version/revision control system) – oprogramowanie służące do śledzenia zmian głównie w kodzie źródłowym oraz pomocy programistom w łączeniu zmian dokonanych w plikach przez wiele osób w różnym czasie.
 1.1. Linus Torvalds – twórca systemu GIT
 GIT to system kontroli wersji, będący wolnym oprogramowaniem o otwartym kodzie. Projektowany był z myślą o jednoczesnej pracy wielu ludzi nad jednym kodem.
