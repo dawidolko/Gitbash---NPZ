@@ -42,16 +42,23 @@ Jak widać w pełni funkcjonalny system kontroli wersji powstał w niecały mies
 ### 1.2. Najważniejsze cechy GITa
 Do najważniejszych cech systemu GIT należą:
 ● Dobre wsparcie dla rozgałęzionego procesu tworzenia oprogramowania: jest dostępnych kilka algorytmów łączenia zmian z dwóch gałęzi, a także możliwość dodawania własnych algorytmów.
+
 ● Praca off-line: każdy programista posiada własną kopię repozytorium, do której może zapisywać zmiany bez połączenia z siecią; następnie zmiany mogą być wymieniane między lokalnymi repozytoriami.
+
 ● Wsparcie dla istniejących protokołów sieciowych: dane można wymieniać przez HTTP(S), FTP, rsync, SSH.
+
 ● Efektywna praca z dużymi projektami: system Git według zapewnień Torvaldsa, a także według testów fundacji Mozilla, jest o rzędy wielkości szybszy niż niektóre konkurencyjne rozwiązania.
+
 ● Wsparcie dla nieliniowego programowania (branche)
+
 ● Adresowanie przez zawartość (SHA-1)
 
 ### 1.3. Stany plików w GIT
 Aby móc pracować z GITem trzeba zrozumieć, w jakich stanach mogą znajdować się zarządzane przez system pliki. Git wprowadza trzy główne stany dla zmian: zmodyfikowany, śledzony oraz zatwierdzony.
 ● zmodyfikowany – plik był edytowany, ale zmiana o tym nie została jeszcze nigdzie zapisana;
+
 ● śledzony – zmodyfikowany plik został oznaczony do zatwierdzenia przy najbliższej operacji commit;
+
 ● zatwierdzony – dokonana zmiana została zapisana i utrwalona w lokalnej bazie danych;
 
 Przesłanie zmian do zdalnego repozytorium jest już operacją opcjonalną.
@@ -59,43 +66,69 @@ Przesłanie zmian do zdalnego repozytorium jest już operacją opcjonalną.
 <br>![picture](images/Picture1.png)
 
 ● katalog Git – to trzon lokalnego repozytorium. W nim Git przechowuje metadane o plikach oraz obiektową bazę danych. Ten katalog jest kopiowany podczas klonowania repozytorium.
+
 ● katalog roboczy – jest to odtworzony obraz wersji projektu. To właśnie zawartość tego katalogu jest modyfikowana przez użytkownika.
+
 ● przechowalnia (stage) – to miejsce pośrednie, między katalogiem roboczym, a lokalną bazą danych. Dzięki niej można utrwalić tylko wybrane zmiany.
 
 ### 1.4. Terminologia
 Podczas pracy z GITem możemy spotkać się z następującym nazewnictwem:
 ● Branch - równoległa gałąź projektu rozwijana oddzielnie od głównej.
+
 ● Tag – marker konkretnej wersji (rewizja w SVN’ie) projektu.
+
 ● Working Dir – katalog roboczy na którym pracujemy
+
 ● Index – rodzaj „cache”, czyli miejsca gdzie trzymane są zmiany do commita
+
 ● Master Branch – główny branch z którym łączymy (merge) nasze zmiany przed wysłaniem do zdalnego repozytorium.
+
 ● Development Branch – gałąź na której łączone są gałęzie feature. Przy wyjściu kolejnej wersji mergowany jest z Master Branchem.
+
 ● Feature Branch – gałąź na której rozwijane jest konkretne narzędzie badź dodatek do głównego projektu.
+
 ● HotFix – branch tworzony na potrzeby szybkich poprawek, naprawienia niezgodności lub bugu.
 
 ### 1.5. Obiekty GITa
 ● Commit – wskazuje na tree oraz ojca, zawiera przykładowo takie informacje jak autor, data i treść wiadomości.
+
 ● Tree – reprezentuje stan pojedynczego katalogu (lista obiektów blob oraz zagnieżdżonych obiektów tree)
+
 ● Blob – zawiera zawartość pliku bez żadnej dodatkowej struktury
+
 ● Tag – wskazuje na konkretny commit oraz zawiera opis taga.
 
 ### 1.6. Git Bash
 **Git Bash** to konsola systemu GIT, która umożliwia w pełni funkcjonalne zarządzanie repozytorium. Za pomocą odpowiednich komend konsolowych można m.in. tworzyć repozytorium, dodawać pliki, śledzić zmiany itd.
 Do najważniejszych poleceń Git Basha należą:
 ● `git init [nazwa]` – tworzy nowe repozytorium lokalne.
+
 ● `git clone origin [link]` - klonuje repozytorium z serwera zdalnego na computer.
+
 ● `git remote add origin [link]` – dodaje repozytorium zdalne do repozytorium lokalnego.
+
 ● `git add [plik]` – dodaje wszystkie zmienione pliki do staged area
+
 ● `git checkout --` . – usuwa wszystkie pliki z staged area.
+
 ● `git branch [nazwa]` – tworzy nowy branch
+
 ● `git checkout –b [nazwa]` – tworzy nowy branch I ustawia go jako aktualny branch.
+
 ● `git checkout [nazwa]` – przełącza na wybrany branch
+
 ● `git commit –m ‘tytuł’ –m ‘opis’` – tworzy commit z plików w staged area o wybranym tytule oraz opisie.
+
 ● `git push` – wypycha zmiany lokalne na serwer zdalny
+
 ● `git pull` – zaciąga oraz przyłącza zmiany z serwera zdalnego na serwer lokalny
+
 ● `git fetch` – pobiera zmiany z repozytorium zdalnego, ale nie przyłącza ich do working directory.
+
 ● `git merge` – łączy zmiany z dwóch różnych branchy, ścieżek, lub zmiany pobrane z repozytorium zdalnego za pomocą git fetch
+
 ● `git stash save [plik]` – dodaje zmieniony plik do schowka
+
 ● `git stash apply` – dodaje zmiany ze schowka do working directory.
 
 ## 2. Instalacja GITa
@@ -196,7 +229,9 @@ git add
 ```
 Składnia polecenia:
 ● `git add text.txt` – dodaje jeden wybrany plik
+
 ● `git add` -A – dodaje wszystkie nieśledzone pliki
+
 ● `git add` . – dodaje do śledzenia bieżący katalog ze wszystkimi plikami i katalogami, które się w nim znajdują
 
 <br>![picture](images/Picture19.png)
