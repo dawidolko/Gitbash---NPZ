@@ -72,13 +72,15 @@ Podczas pracy z GITem możemy spotkać się z następującym nazewnictwem:
 ● Development Branch – gałąź na której łączone są gałęzie feature. Przy wyjściu kolejnej wersji mergowany jest z Master Branchem.
 ● Feature Branch – gałąź na której rozwijane jest konkretne narzędzie badź dodatek do głównego projektu.
 ● HotFix – branch tworzony na potrzeby szybkich poprawek, naprawienia niezgodności lub bugu.
-1.5. Obiekty GITa
+
+### 1.5. Obiekty GITa
 ● Commit – wskazuje na tree oraz ojca, zawiera przykładowo takie informacje jak autor, data i treść wiadomości.
 ● Tree – reprezentuje stan pojedynczego katalogu (lista obiektów blob oraz zagnieżdżonych obiektów tree)
 ● Blob – zawiera zawartość pliku bez żadnej dodatkowej struktury
 ● Tag – wskazuje na konkretny commit oraz zawiera opis taga.
-1.6. Git Bash
-Git Bash to konsola systemu GIT, która umożliwia w pełni funkcjonalne zarządzanie repozytorium. Za pomocą odpowiednich komend konsolowych można m.in. tworzyć repozytorium, dodawać pliki, śledzić zmiany itd.
+
+### 1.6. Git Bash
+**Git Bash** to konsola systemu GIT, która umożliwia w pełni funkcjonalne zarządzanie repozytorium. Za pomocą odpowiednich komend konsolowych można m.in. tworzyć repozytorium, dodawać pliki, śledzić zmiany itd.
 Do najważniejszych poleceń Git Basha należą:
 ● git init [nazwa] – tworzy nowe repozytorium lokalne.
 ● git clone origin [link] - klonuje repozytorium z serwera zdalnego na computer.
@@ -95,21 +97,61 @@ Do najważniejszych poleceń Git Basha należą:
 ● git merge – łączy zmiany z dwóch różnych branchy, ścieżek, lub zmiany pobrane z repozytorium zdalnego za pomocą git fetch
 ● git stash save [plik] – dodaje zmieniony plik do schowka
 ● git stash apply – dodaje zmiany ze schowka do working directory.
-2. Instalacja GITa
-Klikamy Next:
-Wybieramy folder instalacji i klikamy Next:
-Wybieramy komponenty do zainstalowania (pozostawiamy domyślne) i klikamy Next:
-Tworzenie folderu dla Gita w menu Start:
-Wybieramy edytor dla Gita np. Notepad++:
-Wybieramy ustawienia zmiennej środowiskowej PATH:
-Wybieramy ustawienia sieciowe dla Gita:
+
+## 2. Instalacja GITa
+Klikamy **Next**:
+
+<br>![picture](images/Picture2.png)
+
+Wybieramy folder instalacji i klikamy **Next**:
+
+<br>![picture](images/Picture3.png)
+
+Wybieramy komponenty do zainstalowania (pozostawiamy domyślne) i klikamy **Next**:
+
+<br>![picture](images/Picture4.png)
+
+Tworzenie folderu dla Gita w menu **Start**:
+
+<br>![picture](images/Picture5.png)
+
+Wybieramy edytor dla Gita np. **Notepad++**:
+
+<br>![picture](images/Picture6.png)
+
+Wybieramy ustawienia zmiennej środowiskowej **PATH**:
+
+<br>![picture](images/Picture7.png)
+
+Wybieramy ustawienia sieciowe dla **Gita**:
+
+<br>![picture](images/Picture8.png)
+<br>![picture](images/Picture9.png)
+
 Wybieramy ustawienia znaku końca wiersza dla plików tekstowych:
+
+<br>![picture](images/Picture10.png)
+
 Wybieramy terminal:
+
+<br>![picture](images/Picture11.png)
+
 Opcje dodatkowe (domyślne):
+
+<br>![picture](images/Picture12.png)
+
 Instalacja:
-Kończymy instalację i uruchamiamy Git Bash:
-3. Konsola Git Bash
-3.1. Konfiguracja GITa
+
+<br>![picture](images/Picture13.png)
+<br>![picture](images/Picture14.png)
+
+Kończymy instalację i uruchamiamy **Git Bash**:
+
+<br>![picture](images/Picture15.png)
+<br>![picture](images/Picture16.png)
+
+## 3. Konsola Git Bash
+### 3.1. Konfiguracja GITa
 Konfiguracja GITa sprowadza się do ustawienia nazwy użytkownika, adresu e-mail oraz inicjalizacji repozytorium.
 Do tego celu służą kolejno polecenia:
 git config --global user.name "Twoje imię i nazwsko"
