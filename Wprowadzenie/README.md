@@ -32,12 +32,14 @@
 ## 1. Wprowadzenie
 
 System kontroli wersji (ang. version/revision control system) – oprogramowanie służące do śledzenia zmian głównie w kodzie źródłowym oraz pomocy programistom w łączeniu zmian dokonanych w plikach przez wiele osób w różnym czasie.
-1.1. Linus Torvalds – twórca systemu GIT
+
+### 1.1. Linus Torvalds – twórca systemu GIT
 GIT to system kontroli wersji, będący wolnym oprogramowaniem o otwartym kodzie. Projektowany był z myślą o jednoczesnej pracy wielu ludzi nad jednym kodem.
 System GIT stworzył Linus Torvalds jako narzędzie wspomagające rozwój jądra Linux ponieważ wszystkie istniejące (darmowe) systemy kontroli wersji były niewystarczające. System ten miał być rozproszony, szybki, miał chronić przed błędami w repozytorium i nie posiadać wad CVS-a.
 Prace nad Gitem rozpoczęły się 3 kwietnia 2005 roku, projekt został ogłoszony 6 kwietnia, 7 kwietnia Git obsługiwał kontrolę wersji swojego własnego kodu, 18 kwietnia pierwszy raz wykonano łączenie kilku gałęzi kodu, 27 kwietnia Git został przetestowany pod względem szybkości z wynikiem 6,7 łat na sekundę, a 16 czerwca Linux 2.6.12 był hostowany przez Gita.
 Jak widać w pełni funkcjonalny system kontroli wersji powstał w niecały miesiąc. A ojcem tego sukcesu jest oczywiście sam Linus Torvalds, który większość projektu wykonał sam!
-1.2. Najważniejsze cechy GITa
+
+### 1.2. Najważniejsze cechy GITa
 Do najważniejszych cech systemu GIT należą:
 ● Dobre wsparcie dla rozgałęzionego procesu tworzenia oprogramowania: jest dostępnych kilka algorytmów łączenia zmian z dwóch gałęzi, a także możliwość dodawania własnych algorytmów.
 ● Praca off-line: każdy programista posiada własną kopię repozytorium, do której może zapisywać zmiany bez połączenia z siecią; następnie zmiany mogą być wymieniane między lokalnymi repozytoriami.
@@ -45,16 +47,22 @@ Do najważniejszych cech systemu GIT należą:
 ● Efektywna praca z dużymi projektami: system Git według zapewnień Torvaldsa, a także według testów fundacji Mozilla, jest o rzędy wielkości szybszy niż niektóre konkurencyjne rozwiązania.
 ● Wsparcie dla nieliniowego programowania (branche)
 ● Adresowanie przez zawartość (SHA-1)
-1.3. Stany plików w GIT
+
+### 1.3. Stany plików w GIT
 Aby móc pracować z GITem trzeba zrozumieć, w jakich stanach mogą znajdować się zarządzane przez system pliki. Git wprowadza trzy główne stany dla zmian: zmodyfikowany, śledzony oraz zatwierdzony.
 ● zmodyfikowany – plik był edytowany, ale zmiana o tym nie została jeszcze nigdzie zapisana;
 ● śledzony – zmodyfikowany plik został oznaczony do zatwierdzenia przy najbliższej operacji commit;
 ● zatwierdzony – dokonana zmiana została zapisana i utrwalona w lokalnej bazie danych;
+
 Przesłanie zmian do zdalnego repozytorium jest już operacją opcjonalną.
+
+<br>![picture]([images/Picture1.png])
+
 ● katalog Git – to trzon lokalnego repozytorium. W nim Git przechowuje metadane o plikach oraz obiektową bazę danych. Ten katalog jest kopiowany podczas klonowania repozytorium.
 ● katalog roboczy – jest to odtworzony obraz wersji projektu. To właśnie zawartość tego katalogu jest modyfikowana przez użytkownika.
 ● przechowalnia (stage) – to miejsce pośrednie, między katalogiem roboczym, a lokalną bazą danych. Dzięki niej można utrwalić tylko wybrane zmiany.
-1.4. Terminologia
+
+### 1.4. Terminologia
 Podczas pracy z GITem możemy spotkać się z następującym nazewnictwem:
 ● Branch - równoległa gałąź projektu rozwijana oddzielnie od głównej.
 ● Tag – marker konkretnej wersji (rewizja w SVN’ie) projektu.
