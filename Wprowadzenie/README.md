@@ -56,7 +56,7 @@ Aby móc pracować z GITem trzeba zrozumieć, w jakich stanach mogą znajdować 
 
 Przesłanie zmian do zdalnego repozytorium jest już operacją opcjonalną.
 
-<br>![picture]([images/Picture1.png])
+<br>![picture](images/Picture1.png)
 
 ● katalog Git – to trzon lokalnego repozytorium. W nim Git przechowuje metadane o plikach oraz obiektową bazę danych. Ten katalog jest kopiowany podczas klonowania repozytorium.
 ● katalog roboczy – jest to odtworzony obraz wersji projektu. To właśnie zawartość tego katalogu jest modyfikowana przez użytkownika.
