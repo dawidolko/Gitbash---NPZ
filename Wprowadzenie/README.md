@@ -82,21 +82,21 @@ Podczas pracy z GITem możemy spotkać się z następującym nazewnictwem:
 ### 1.6. Git Bash
 **Git Bash** to konsola systemu GIT, która umożliwia w pełni funkcjonalne zarządzanie repozytorium. Za pomocą odpowiednich komend konsolowych można m.in. tworzyć repozytorium, dodawać pliki, śledzić zmiany itd.
 Do najważniejszych poleceń Git Basha należą:
-● git init [nazwa] – tworzy nowe repozytorium lokalne.
-● git clone origin [link] - klonuje repozytorium z serwera zdalnego na computer.
-● git remote add origin [link] – dodaje repozytorium zdalne do repozytorium lokalnego.
-● git add [plik] – dodaje wszystkie zmienione pliki do staged area
-● git checkout -- . – usuwa wszystkie pliki z staged area.
-● git branch [nazwa] – tworzy nowy branch
-● git checkout –b [nazwa] – tworzy nowy branch I ustawia go jako aktualny branch.
-● git checkout [nazwa] – przełącza na wybrany branch
-● git commit –m ‘tytuł’ –m ‘opis’ – tworzy commit z plików w staged area o wybranym tytule oraz opisie.
-● git push – wypycha zmiany lokalne na serwer zdalny
-● git pull – zaciąga oraz przyłącza zmiany z serwera zdalnego na serwer lokalny
-● git fetch – pobiera zmiany z repozytorium zdalnego, ale nie przyłącza ich do working directory.
-● git merge – łączy zmiany z dwóch różnych branchy, ścieżek, lub zmiany pobrane z repozytorium zdalnego za pomocą git fetch
-● git stash save [plik] – dodaje zmieniony plik do schowka
-● git stash apply – dodaje zmiany ze schowka do working directory.
+● `git init [nazwa]` – tworzy nowe repozytorium lokalne.
+● `git clone origin [link]` - klonuje repozytorium z serwera zdalnego na computer.
+● `git remote add origin [link]` – dodaje repozytorium zdalne do repozytorium lokalnego.
+● `git add [plik]` – dodaje wszystkie zmienione pliki do staged area
+● `git checkout --` . – usuwa wszystkie pliki z staged area.
+● `git branch [nazwa]` – tworzy nowy branch
+● `git checkout –b [nazwa]` – tworzy nowy branch I ustawia go jako aktualny branch.
+● `git checkout [nazwa]` – przełącza na wybrany branch
+● `git commit –m ‘tytuł’ –m ‘opis’` – tworzy commit z plików w staged area o wybranym tytule oraz opisie.
+● `git push` – wypycha zmiany lokalne na serwer zdalny
+● `git pull` – zaciąga oraz przyłącza zmiany z serwera zdalnego na serwer lokalny
+● `git fetch` – pobiera zmiany z repozytorium zdalnego, ale nie przyłącza ich do working directory.
+● `git merge` – łączy zmiany z dwóch różnych branchy, ścieżek, lub zmiany pobrane z repozytorium zdalnego za pomocą git fetch
+● `git stash save [plik]` – dodaje zmieniony plik do schowka
+● `git stash apply` – dodaje zmiany ze schowka do working directory.
 
 ## 2. Instalacja GITa
 Klikamy **Next**:
@@ -149,7 +149,8 @@ Kończymy instalację i uruchamiamy **Git Bash**:
 <br>![picture](images/Picture14.png)
 
 ## 3. Konsola Git Bash
-### 3.1. Konfiguracja GITa
+
+## 3.1. Konfiguracja GITa
 Konfiguracja GITa sprowadza się do ustawienia nazwy użytkownika, adresu e-mail oraz inicjalizacji repozytorium.
 Do tego celu służą kolejno polecenia:
 ```
@@ -169,7 +170,7 @@ W wyniku w wybranym folderze utworzony został ukryty katalog **.git** zawieraj�
 `ZADANIE`
 Utwórz na pulpicie katalog o nazwie moje_repozytorium i zainicjalizuj go jako repozytorium GITa.
 
-### 3.2. Rejestrowanie zmian w repozytorium
+## 3.2. Rejestrowanie zmian w repozytorium
 Rejestrowanie zmian w repozytorium podzielone jest na kilka etapów bezpośrednio związanych z cyklem życia zmian.
 ### 3.2.1. Sprawdzenie stanu plików w repozytorium
 Do sprawdzenia stanu plików w repozytorium (statusu) służy polecenie:
@@ -178,7 +179,9 @@ git status
 ```
 <br>![picture](images/Picture17.png)
 Jak można zauważyć, w naszym repozytorium nie ma żadnych plików, które są śledzone.
+
 `ZADANIE`
+
 Utwórz w katalogu repozytorium nowy plik tekstowy text.txt i zapisz w nim tekst Ala ma kota. Następnie sprawdź status plików w repozytorium.
 W wyniku wykonanych czynności otrzymujemy komunikat:
 
@@ -192,19 +195,23 @@ Aby rozpocząć śledzenie naszego pliku posłużymy się poleceniem
 git add
 ```
 Składnia polecenia:
-● git add text.txt – dodaje jeden wybrany plik
-● git add -A – dodaje wszystkie nieśledzone pliki
-● git add . – dodaje do śledzenia bieżący katalog ze wszystkimi plikami i katalogami, które się w nim znajdują
+● `git add text.txt` – dodaje jeden wybrany plik
+● `git add` -A – dodaje wszystkie nieśledzone pliki
+● `git add` . – dodaje do śledzenia bieżący katalog ze wszystkimi plikami i katalogami, które się w nim znajdują
 
 <br>![picture](images/Picture19.png)
 
 Jak można zauważyć, status pliku **text.txt** zmienił się.
+
 `ZADANIE`
+
 Dodaj do śledzenia plik **text.txt** i następnie sprawdź status repozytorium.
 
 ### 3.2.3. Dodawanie zmian do poczekalni
 Jak zostało wcześniej napisane, GIT operuje na pojedynczych zmianach, a nie na plikach. Bardzo dobrze to widać podczas dodawania plików do poczekalni.
+
 `ZADANIE`
+
 Zmodyfikuj plik **text.txt** dodając do niego kolejną linię tekstu: Kot ma Alę. Następnie sprawdź status plików w repozytorium.
 Ponowne wywołanie git status pokazuje, że plik **text.txt** jest jednocześnie w dwóch sekcjach:
 
@@ -216,14 +223,16 @@ Dzieje się tak, ponieważ GIT umieszcza plik w poczekalni w dokładnie takiej w
 <br>![picture](images/Picture21.png)
 
 Wykorzystanie poczekalni w procesie zatwierdzania zmian daje ogromne możliwości, dzięki temu można wybrać, które konkretnie modyfikacje chce się zatwierdzić i utrwalić w repozytorium.
+
 `ZADANIE`
+
 Zaktualizuj plik **text.txt** poprzez wywołanie komendy `git add`. Sprawdź status plików.
 
 ### 3.2.4. Podgląd dokonanych zmian
 Jest to bardzo ważna funkcjonalność. Przed zatwierdzeniem zmian zawsze warto zweryfikować, czy wszystko poszło zgodnie z planem. Może się zdarzyć, że zmiany zostały zrobione nie w tym miejscu, co trzeba lub pojawiły się jakieś dodatkowe wygenerowane pliki, których nie chcemy utrwalać w repozytorium. Dzięki weryfikacji zmian w podglądzie można uniknąć tego typu błędów.
 Polecenie git status dostarczy tylko informacji, które pliki zostały zmodyfikowane, natomiast dzięki git diff można dokładnie zobaczyć te zmiany.
-● różnica między katalogiem roboczym a poczekalnią – git diff
-● różnica między poczekalnią a repozytorium – git diff --cached
+● różnica między katalogiem roboczym a poczekalnią – `git diff`
+● różnica między poczekalnią a repozytorium – `git diff --cached`
 `ZADANIE`
 
 <br>![picture](images/Picture22.png)
@@ -280,7 +289,9 @@ Jeżeli potrzebujemy określić zarówno autora jak i słowa kluczowe, musimy do
 <br>![picture](images/Picture30.png)
 
 `ZADANIE`
+
 Utworzyć kolejny plik **text2.txt** i dodać go do repozytorium oraz zacomitować zmiany (komentarz dowolny). Następnie zmodyfikować plik **text2.txt** umieszczając w nim tekst: Stoi na stacji lokomotywa. Dodać zmiany (add). Dodać kolejną linie tekstu w pliku **tekst2.txt**: Ciężka, ogromna i pot z niej spływa – tłusta oliwa. Dodać zmiany i wykonać commit. Sprawdzić działanie polecenia git log z różnymi opcjami, o których mowa w tym podrozdziale.
+
 ## 3.3. Rozszerzone mechanizmy
 ### 3.3.1. Cofanie zmian
 W celu wycofania zmian, które zostały już wysłane do zdalnego repozytorium, można skorzystać z commitów wycofujących. Ten mechanizm nie modyfikuje historii, a generuje commit, który jest przeciwieństwem zmiany, którą chcemy wycofać. Służy do tego polecenie:
@@ -291,7 +302,9 @@ git revert [opcje]
 <br>![picture](images/Picture31.png)
 
 Powyższe wywołanie cofa ostatni commit w rewizji HEAD.
+
 `ZADANIE`
+
 Dodać do pliku **text2.txt** kolejną linię tekstu: ciuch, ciuch. Dodać zmiany i wykonać commit. Następnie dodać jeszcze jedną linię: lokomotywa odjeżdża i również dodać zmiany i wykonać commit. Dalej wycofać ostatnie 2 commity i sprawdzić zawartość pliku **text2.txt**.
 Usunąć plik **text.txt** i zatwierdzić zmiany wykonując polecenia add i commit. Następnie wycofać ostatni commit i sprawdzić zawartość repozytorium. Sprawdzić historię zmian w repozytorium.
 
@@ -302,7 +315,9 @@ W celu oznaczenia aktualnych źródeł nowym tagiem wpisujemy komendę:
 git tag [nazwa-taga]
 ```
 Natomiast sama komenda git tag, bez podania żadnych argumentów, wyświetli listę wszystkich znanych tagów.
+
 `ZADANIE`
+
 Utworzyć etykietę dla bieżącej wersji repozytorium. Następnie dokonać kilku zmian w repozytorium wraz z commitami i otagować każdy commit. Wyświetlić listę tagów.
 
 ### 3.3.3. Ignorowanie plików
@@ -316,11 +331,13 @@ Tmp #komentarz2
 Kolejne klasy ignorowanych plików wpisujemy w osobnych linijkach. Pierwsza linijka odpowiedzialna jest za ignorowanie wszystkich plików o rozszerzeniu .tmp, natomiast druga za cały katalog tmp oraz jego zawartość.
 Warto już na starcie zdefiniować, które pliki mają być ignorowane. Pozwoli to w przyszłości na uniknięcie zabawy z niepotrzebnymi plikami.
 Ponieważ plik **.gitignore** jest zwykłym plikiem tekstowym przechowywanym w głównym katalogu repozytorium, on również może podlegać wersjonowaniu. Po jego dodaniu lub modyfikacji warto zacommitować naniesione zmiany lub jego też oznaczyć do ignorowania.
+
 `ZADANIE`
+
 Utworzyć plik **.gitignore** i umieścić w nim kilka rozszerzeń plików (np. *.tmp, *.inf) oraz katalog np. temp. Wykonać commit. Następnie dodać do repozytorium po 1 pliku z każdym z ignorowanych
 rozszerzeń oraz katalog podany do ignorowania. W katalogu tym powinno znajdować się kilka plików. Sprawdzić status repozytorium, tzn. czy są jakieś zmiany widziane przez GITa.
 
-### 3.4. Gałęzie w Gicie
+## 3.4. Gałęzie w Gicie
 Rozgałęzianie projektu (np. kodu programu) to jedna z ważniejszych funkcjonalności GITa. Praca z gałęziami (branch) jest bardzo szybka, w odróżnieniu od innych podobnych rozwiązań. Gałąź w Gicie została zaimplementowana jako lekki, przesuwalny wskaźnik na miejsce w historii.
 Domyślna nazwa gałęzi to master. Do tej pory pracowaliśmy tylko na niej. Pracując na kilku branchach system musi wiedzieć, na którym aktualnie się znajdujemy, w tym celu wprowadzono wskaźnik HEAD.
 Do tworzenia nowych gałęzi służy polecenie:
@@ -343,7 +360,9 @@ git checkout [nazwa-brancha]
 <br>![picture](images/Picture33.png)
 
 Jak można zauważyć, nazwa aktywnego brancha wyświetlana jest również w nawiasach na końcu ścieżki przed znakiem zachęty.
+
 `ZADANIE`
+
 Utworzyć nowy branch o nazwie new_branch. Przejść do nowo utworzonej gałęzi. Następnie utworzyć plik tekstowy n_branch.txt i zapisać w nim tekst: Nowy branch. Zastosować wprowadzone zmiany w repozytorium (dodać plik i zacommitować).
 ### 3.4.1. Rozgałęzienie historii projektu
 Czasami zachodzi potrzeba rozwidlenia historii projektu, żeby móc np. rozwijać na osobnej gałęzi nową funkcjonalność, jednocześnie nie przeszkadzając innym w pracy. Wprowadzane w ten sposób zmiany są od siebie niezależne, łączy je tylko wspólny punkt w historii.
@@ -351,7 +370,9 @@ Czasami zachodzi potrzeba rozwidlenia historii projektu, żeby móc np. rozwija�
 Ogólnie przyjętym zwyczajem jest rozwijanie nowych, niestabilnych funkcjonalności na osobnych branchach, żeby zachować jak największą stabilność głównej gałęzi master.
 ### 3.4.1.1. Nowa funkcjonalność
 W naszym przykładzie nowa funkcjonalność będzie polegała na dodaniu nowej linii tekstu do pliku feature.txt. Ponieważ plik ten nie istnieje, dlatego musimy go utworzyć w branchu master i utworzyć dla niego historię zmian poprzez modyfikację jego zawartości.
+
 `ZADANIE`
+
 W branchu master utworzyć nowy plik o nazwie feature.txt i umieścić w nim tekst: Linia 1. Dodać plik do repozytorium i zacommitować zmiany. Następnie w nowych liniach tego pliku dodać tekst: Linia 2 i Linia 3. Ponownie zatwierdzić wszystkie zmiany.
 Utworzyć nową gałąź o nazwie feature i przejść do niej. Do pliku feature.txt dodać linię tekstu: Funkcjonalność w branchu feature. Zacommitować zmiany. (Zob. rys. poniżej).
 
@@ -370,7 +391,9 @@ git checkout -b feature
 ### 3.4.1.2. Szybka poprawka Hot Fix
 W momencie pracy nad nową funkcjonalnością może się zdarzyć, że np. zostanie wykryty jakiś błąd w wersji podstawowej projektu (która już działa i jest wykorzystywana przez klienta) i konieczne będzie naniesienie poprawek. Funkcjonalność w branchu feature jest jednak w fazie, w której jej zakończenie jest niemożliwe. Nie możemy zatem nanieść żądanych poprawek i zakończyć brancha feature (scalić z master). W takim przypadku przełączamy się na branch master, gdzie nie ma jeszcze nowej funkcjonalności i tam wprowadzamy konieczne poprawki.
 Dzięki temu zabiegowi mamy działającą wersję w gałęzi master wraz z naniesionymi poprawkami oraz spokojnie możemy kontynuować pracę nad nową funkcjonalnością w branchu feature.
+
 `ZADANIE`
+
 Przełączyć się na branch master, dodać w pliku feature.txt linię tekstu: Poprawka HotFix. Linia ta powinna znajdować się między liniami 1 i 2. Zacommitować zmiany.
 
 <br>![picture](images/Picture35.png)
@@ -386,7 +409,9 @@ git merge master
 
 Udało się automatycznie przenieść wszystkie zmiany z master do feature. Czasami jednak mogą wystąpić konflikty, ale do tego wrócimy.
 Kończymy rozwijanie nowej funkcjonalności. Teraz można gotową funkcjonalność zacommitować i zmerge’ować do gałęzi master.
+
 `ZADANIE`
+
 Będąc w gałęzi feature dodać na końcu pliku feature.txt następującą linię tekstu: Zakończenie funkcjonalności feature. Zacommitować zmiany. Scalić gałąź feature z gałęzią master wykorzystując polecenie:
 ```
 git merge feature
@@ -404,7 +429,9 @@ Jak widać na powyższym obrazku, pozostał tylko branch master.
 
 ### 3.4.3. Konflikty scalania
 Nie zawsze jednak scalanie gałęzi przebiega bezproblemowo. Mamy wtedy do czynienia z konfliktami w kodzie, które należy rozwiązać. Dzieje się tak najczęściej, jeżeli dany fragment kodu będzie edytowany na obu gałęziach.
+
 `ZADANIE`
+
 W gałęzi master utworzyć plik main.cpp i umieścić w nim kod:
 ```
 int a = 2;
@@ -442,7 +469,9 @@ Otrzymujemy szersze informacje o konflikcie, m.in. że dotyczy on pliku main.cpp
 GIT umieścił kod z obu gałęzi między specjalnymi znacznikami.
 Teraz należy rozwiązać konflikt poprzez poprawienie kodu oraz zacommitowanie go do repozytorium. Trzeba też usunąć znaczniki dodane podczas merge’owania.
 Przeniesienie pliku do poczekalni oznacza w Gicie rozwiązanie konfliktu.
+
 `ZADANIE`
+
 Rozwiązać konflikt, który wystąpił podczas merge’owania poprzez pozostawienie linii kodu z wartością b=4 oraz usunięcie zbędnych linii w pliku main.cpp. Zacommitować zmiany i sprawdzić status repozytorium:
 
 <br>![picture](images/Picture44.png)
