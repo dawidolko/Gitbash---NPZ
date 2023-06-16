@@ -7,9 +7,9 @@
   1.3. Stany plików w GIT \
   1.4. Terminologia \
   1.5. Obiekty GITa \
-  1.6. Git Bash \
-### 2. Instalacja GITa \
-### 3. Konsola Git Bash \
+  1.6. Git Bash 
+### 2. Instalacja GITa 
+### 3. Konsola Git Bash 
   3.1. Konfiguracja GITa \
   3.2. Rejestrowanie zmian w repozytorium\
   3.2.1. Sprawdzenie stanu plików w repozytorium\
