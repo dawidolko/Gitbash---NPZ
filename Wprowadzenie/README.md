@@ -143,12 +143,10 @@ Opcje dodatkowe (domyślne):
 Instalacja:
 
 <br>![picture](images/Picture13.png)
-<br>![picture](images/Picture14.png)
 
 Kończymy instalację i uruchamiamy **Git Bash**:
 
-<br>![picture](images/Picture15.png)
-<br>![picture](images/Picture16.png)
+<br>![picture](images/Picture14.png)
 
 ## 3. Konsola Git Bash
 ### 3.1. Konfiguracja GITa
