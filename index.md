@@ -9,25 +9,24 @@ redirect_to: gitbash.dawidolko.pl
 
 ### Labolatoria:
 
-**[Lab00](TASK00/README.md) - Konfiguracja środowiska**
+**[Zbiór zadań](TASK00/README.md) - Zestaw zadań 1**
  - [Rozwiązane zadania](https://github.com/dawidolko/Gitbash-NPZ/tree/main/TASK00)
 
 <br>
 
 
-**[Lab01](TASK01/README.md) - Zmienne, Operatory, Instrukcje warunkowe, I/O**
+**[Zbiór zadań](TASK01/README.md) - Zestaw zadań 2**
  - [Rozwiązane zadania](https://github.com/dawidolko/Gitbash-NPZ/tree/main/TASK01)
 
 <br>
 
-**[Lab02](TASK02/README.md) - Pętle i tablice.**
+**[Zbiór zadań](TASK02/README.md) - Zestaw zadań 3**
  - [Rozwiązane zadania](https://github.com/dawidolko/Gitbash-NPZ/tree/main/TASK02)
 
 <br>
 
-### Kolokwia: 
-**[WPROWADZENIE](Wprowadzenie/README.md) - Kolokwium 0**
- - [Rozwiązane zadania](https://github.com/dawidolko/Gitbash-NPZ/tree/main/Wprowadzenie)
+### WAŻNE!: 
+**[WPROWADZENIE](Wprowadzenie/README.md) - Wstęp do gitbasha**
 
 
 
