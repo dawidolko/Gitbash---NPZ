@@ -25,7 +25,7 @@ cebula bez przerażenia.
 
 ### **8.** Zadeklaruj GITowi, aby nie zawierał plików .doc w repozytorium i zapisać tą zmianę z opisem „ignorowanie .doc”.
 
-### **9.**Stwórz plik smieci.doc o treści: „nie ma tu nic ciekawego”.
+### **9.** Stwórz plik smieci.doc o treści: „nie ma tu nic ciekawego”.
 
 ### **10.** Zapisz log zmian w repozytorium w pliku log.txt po czym dodać go do repozytorium i zapisać z opisem „logi”.
 
