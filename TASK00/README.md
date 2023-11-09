@@ -21,7 +21,7 @@ ryba ćwiartuje rybę ostrą rybą,
 ryba buduje rybę, ryba mieszka w rybie,
 ryba ucieka z oblężonej ryby.
 ```
-### **Zadanie 5.**
+### **Zadanie 5.** 
 Dodaj nowy plik do repozytorium i wykonaj commit z opisem „ryba”
 
 ### **Zadanie 6.** 
