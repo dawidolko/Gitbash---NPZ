@@ -1,11 +1,15 @@
 # TASK02
-### **1.** Stwórz folder o nazwie zgodnej z imieniem i nazwiskiem, wewnątrz niego folder local, local2 oraz remote.
+### **Task 1.** 
+Create a folder named after your name and surname, inside it there are local, local2 and remote folders.
 
-### **2.** Przejdź do folderu local i założyć w nim nowe repozytorium GIT.
+### **Task 2.** 
+Go to the local folder and create a new GIT repository there.
 
-### **3.** Przejdź do folderu remote założyć czyste zdalne repozytorium komendą: git init —bare.
+### **Task 3.** 
+Go to the remote folder and create a clean remote repository with the command: git init —bare.
 
-### **4.** Wrócić do local i stworzyć plik o nazwie Cebula.txt i umieścić w nim tekst (polskie znaki nie są konieczne):
+### **Task 4.** 
+Go back to local and create a file called Cebula.txt and put the text in it (Polish characters are not necessary):
 ```
 Co innego cebula.
 Ona nie ma wnętrzności.
@@ -17,27 +21,38 @@ mogłaby wejrzeć w siebie
 cebula bez przerażenia.
 ```
 
-### **5.** Dodaj nowy plik do repozytorium i wykonać commit z opisem „cebulka”.
+### **Task 5.** 
+Add a new file to the repository and commit with the description "onion".
 
-### **6.** Ustaw jako zdalne repozytorium folder ../remote.
+### **Task 6.** 
+Set the ../remote folder as the remote repository.
 
-### **7.** „Wypchnij” aktualną wersję repozytorium zawartą w folderze local do zdalnego.
+### **Task 7.** 
+"Push" the current version of the repository contained in the local folder to the remote one.
 
-### **8.** Zadeklaruj GITowi, aby nie zawierał plików .doc w repozytorium i zapisać tą zmianę z opisem „ignorowanie .doc”.
+### **Task 8.** 
+Declare GIT not to include .doc files in the repository and save this change with the description "ignore .doc".
 
-### **9.** Stwórz plik smieci.doc o treści: „nie ma tu nic ciekawego”.
+### **Task 9.** 
+Create a garbage.doc file with the following content: "there's nothing interesting here."
 
-### **10.** Zapisz log zmian w repozytorium w pliku log.txt po czym dodać go do repozytorium i zapisać z opisem „logi”.
+### **Task 10.** 
+Save the log of changes in the repository in the log.txt file, then add it to the repository and save it with the description "logs".
 
-### **11.** Uaktualnij zdalne repozytorium.
+### **Task 11.** 
+Update the remote repository.
 
-### **12.** Zamień słowa „cebula” na „marchewka” w pliku Cebula.txt.
+### **Task 12.** 
+Replace the words "onion" with "carrot" in the Onion.txt file.
 
-### **13.** Wygeneruj plik o nazwie roznica.txt zawierający różnice w stosunku do oryginału pliku.
+### **Task 13.** 
+Generate a file called roznica.txt containing the differences from the original file.
 
-### **14.** Przejdź do katalogu local2 i sklonować do niego zawartość zdalnego repozytorium remote.
+### **Task 14.** 
+Navigate to the local2 directory and clone the contents of the remote repository to it.
 
-### **15.** Do pliku Cebula.txt ( w katalogu local2/remote )dodaj kolejną zwrotkę:
+### **Task 15.** 
+Add another verse to the Cebula.txt file (in the local2/remote directory):
 ```
 W nas obczyzna i dzikość
 ledwie skórą przykryta,
@@ -48,26 +63,35 @@ nie pokrętne jelita.
 Ona wielekroć naga,
 do głębi itympodobna.
 ```
+### **Task 16.** 
+Save the changes locally with the description "second verse" and then send them to remote.
 
-### **16.** Zapisz zmiany lokalnie z opisem „druga zwrotka” po czym wysłać je do remote.
+### **Task 17.** 
+Return to the local folder and save only the onion.txt file with the description "carrot" to the local repository.
 
-### **17.** Wróć do folderu local i zapisać do repozytorium lokalnego tylko plik cebula.txt z opisem „marchewka”.
+### **Task 18.** 
+Create a new branch "carrot".
 
-### **18.** Załóż nową gałąź „marchewka”.
+### **Task 19.** 
+While still in master, send changes to remote - this requires resolving the conflict. The first verse with "carrots" and the second original verse are to remain in Cebula.txt. Leave the commit description as default.
 
-### **19.** Będąc nadal w master wyślij zmiany do remote - wymaga to rozwiązania konfliktu. W Cebula.txt ma pozostać pierwsza zwrotka z „marchewkami” oraz druga zwrotka oryginalna. Opis commita zostaw domyślny.
+### **Task 20.** 
+Go to the newly created branch "carrot" and after the first stanza add a new line "Long live the carrot!"
 
-### **20.** Przejdź do nowo utworzonej gałęzi „marchewka” i po pierwszej zwrotce dopisać nową linię „Niech żyje marchewka!”.
+### **Task 21.** 
+Add the file roznica.txt and cebula.txt in the new version to the repository in a new branch with the description "carrot's birthday" and send to remote.
 
-### **21.** Dodaj plik roznica.txt oraz cebula.txt w nowej wersji do repozytorium w nowej gałęzi z opisem „urodziny marchewki” i wysłać do remote.
+### **Task 22.** 
+Return to master branch.
 
-### **22.** Wróć do gałęzi master.
+### **Task 23.** 
+What file is missing and why, place the explanation in the file wyjaszanie.txt and save it in the repository with the description "explanation".
 
-### **23.** Jakiego pliku brakuje i dlaczego wyjaśnienie umieść w pliku wyjasnienie.txt oraz zapisać w repozytorium z opisem „wyjasnienie”.
+### **Task 24.** 
+Unmerge the Cebula.txt file and return it to its state of two verses without carrots.
 
-### **24.** Cofnij merge pliku Cebula.txt i wrócić do jego stanu zawierającego dwie zwrotki bez marchewek.
-
-### **25.** Dodaj trzecią zwrotkę, zapisać ją i wysłać do remote:
+### **Task 25.** 
+Add the third verse, save it and send it to remote:
 ```
 Byt niesprzeczny cebula,
 udany cebula twór.
@@ -78,6 +102,8 @@ czyli trzecia i czwarta.
 Dośrodkowa fuga.
 Echo złożone w chór.
 ```
-### **26.** Przejdź do folderu local2/remote i na końcu pliku dopisać „Ah ta cebula!”.
+### **Task 26.** 
+Go to the local2/remote folder and add "Ah, that onion!" at the end of the file.
 
-### **27.** Cały folder nazwany imieniem i nazwiskiem spakować i przesłać na moodle.
+### **Task 27.** 
+Pack the entire folder named after your name and surname and upload it to Moodle.
