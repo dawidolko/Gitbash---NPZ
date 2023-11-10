@@ -1,13 +1,13 @@
 # TASK00
 
-### **Excercise 1.**
+### **Task 1.**
 Create a folder named after your name and surname, with a folder inside it
 local, local2 and remote.
 
-### **Exercise 2.**
+### **Task 2.**
 Go to the local folder and create a new Git repository there.
 
-### **Exercise 3.**
+### **Task 3.**
 Go to the remote folder and create a clean remote repository with the command:
 git init –bare
 
