@@ -1,8 +1,3 @@
-
-​Sprawdź szczegóły
-3 155 / 5 000
-Wyniki tłumaczenia
-Tłumaczenie
 #TASK00
 
 ### **Excercise 1.**
