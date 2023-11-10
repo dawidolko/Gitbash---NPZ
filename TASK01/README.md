@@ -1,16 +1,16 @@
 # TASK01
 
-### **Zadanie 1.**
-Utworzyć na pulpicie folder ze swoim imieniem, a w nim umieścić 3 katalogi: global, local i local2.
+### **Excercise 1.**
+Create a folder on your desktop with your name and place 3 directories in it: global, local and local2.
 
-### **Zadanie 2.** 
-Przejść do folderu local i utworzyć w nim nowe repozytorium.
+### **Exercise 2.**
+Go to the local folder and create a new repository there.
 
-### **Zadanie 3.** 
-Przejść do folderu global i utworzyć w nim nowe repozytorium globalne/zdalne korzystając z komendy git init --bare.
+### **Exercise 3.**
+Go to the global folder and create a new global/remote repository there using the git init --bare command.
 
-### **Zadanie 4.** 
-Wrócić do folderu local i utworzyć w nim plik tekstowy lokomotywa.txt, w którym umieścić tekst:
+### **Task 4.**
+Return to the local folder and create a text file lokomotywa.txt in which to place the text:
 ```
 Stoi na stacji lokomotywa,
 Ciężka, ogromna i pot z niej spływa:
@@ -24,38 +24,38 @@ Uff - jak gorąco!
 Już ledwo sapie, już ledwo zipie,
 A jeszcze palacz węgiel w nią sypie.
 ```
-### **Zadanie 5.** 
-Dodać nowy plik do repozytorium i wykonać commit z opisem „ciuchcia”.
+### **Task 5.**
+Add a new file to the repository and commit with the description "choochio".
 
-### **Zadanie 6.** 
-Ustawić jako zdalne repozytorium folder global.
+### **Task 6.**
+Set the global folder as a remote repository.
 
-### **Zadanie 7.** 
-„Wypchnąć” aktualną wersję repozytorium znajdującą się w katalogu local do repozytorium globalnego.
+### **Task 7.**
+"Push" the current version of the repository located in the local directory to the global repository.
 
-### **Zadanie 8.** 
-Zadeklarować GITowi, aby nie zawierał plików .docx w repozytorium i zapisać tą zmianę z opisem „ignorowanie .docx”.
+### **Task 8.**
+Declare GIT not to include .docx files in the repository and save this change with the description "ignoring .docx".
 
-### **Zadanie 9.** 
-Utworzyć plik smieci.docx o treści: „nie ma tu nic ciekawego”.
+### **Task 9.**
+Create a file junk.docx with the content: "there is nothing interesting here."
 
-### **Zadanie 10.** 
-Zapisać log zmian w repozytorium w pliku log.txt po czym dodać go do repozytorium i zapisać z opisem „logi”.
+### **Task 10.**
+Save the log of changes in the repository in the log.txt file, then add it to the repository and save it with the description "logs".
 
-### **Zadanie 11.** 
-Uaktualnić zdalne repozytorium.
+### **Task 11.**
+Update the remote repository.
 
-### **Zadanie 12.** 
-W pliku lokomotywa.txt zamienić wszystkie słowa gorąco na zimno.
+### **Task 12.**
+In the file lokomotywa.txt, replace all words hot with cold.
 
-### **Zadanie 13.** 
-Wygenerować plik o nazwie roznica.txt zawierający różnice w stosunku do oryginału pliku lokomotywa.txt.
+### **Task 13.**
+Generate a file called roznica.txt containing differences from the original lokomotywa.txt file.
 
-### **Zadanie 14.** 
-Przejść do katalogu local2 i sklonować do niego zawartość zdalnego repozytorium global.
+### **Task 14.**
+Change to the local2 directory and clone the contents of the remote global repository to it.
 
-### **Zadanie 15.**
-Do pliku lokomotywa.txt ( w katalogu local2/global ) dodać kolejną zwrotkę:
+### **Task 15.**
+Add another verse to the lokomotywa.txt file (in the local2/global directory):
 ```
 Wagony do niej podoczepiali
 Wielkie i ciężkie, z żelaza, stali,
@@ -78,14 +78,14 @@ I każdy zjadłby tysiąc kotletów,
 I każdy nie wiem jak się wytężał,
 To nie udźwigną, taki to ciężar.
 ```
-### **Zadanie 16.** 
-Zapisać zmiany lokalnie z opisem „druga strofa” po czym wysłać je do global.
+### **Task 16.**
+Save the changes locally with the description "second stanza" and then send them to global.
 
-### **Zadanie 17.** 
-Wrócić do folderu local i zapisać do repozytorium lokalnego tylko plik lokomotywa.txt z opisem „zimno”.
+### **Task 17.**
+Return to the local folder and save only the lokomotywa.txt file with the description "cold" to the local repository.
 
-### **Zadanie 18.** 
-Założyć nową gałąź „zimno”.
+### **Task 18.**
+Establish a new branch "cold".
 
-### **Zadanie 19.** 
-Będąc nadal w master proszę wysłać zmiany do global - wymaga to rozwiązania konfliktu. W lokomotywa.txt ma pozostać pierwsza strofa ze słowem „zimno” oraz druga strofa oryginalna. Opis commita proszę zostawić domyślny.
+### **Task 19.**
+While still in master, please send the changes to global - this requires resolving the conflict. The first stanza with the word "cold" and the second original stanza are to remain in lokomotywa.txt. Please leave the commit description as default.
