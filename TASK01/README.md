@@ -1,6 +1,6 @@
 # TASK01
 
-### **Zadanie 1.** 
+### **Zadanie 1.**
 Utworzyć na pulpicie folder ze swoim imieniem, a w nim umieścić 3 katalogi: global, local i local2.
 
 ### **Zadanie 2.** 
