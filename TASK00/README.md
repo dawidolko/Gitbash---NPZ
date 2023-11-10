@@ -1,19 +1,24 @@
-# TASK00
 
-### **Zadanie 1.**
-Utwórz folder o nazwie zgodnej z imieniem i nazwiskiem, wewnątrz niego folder
-local, local2 oraz remote.
+​Sprawdź szczegóły
+3 155 / 5 000
+Wyniki tłumaczenia
+Tłumaczenie
+#TASK00
 
-### **Zadanie 2.**
-Przejdź do folderu local i załóż w nim nowe repozytorium Git.
+### **Excercise 1.**
+Create a folder named after your name and surname, with a folder inside it
+local, local2 and remote.
 
-### **Zadanie 3.**
-Przejdź do folderu remote załóż czyste zdalne repozytorium komendą:
+### **Exercise 2.**
+Go to the local folder and create a new Git repository there.
+
+### **Exercise 3.**
+Go to the remote folder and create a clean remote repository with the command:
 git init –bare
 
-### **Zadanie 4.**
-Wróć do folderu local i stworzyć plik o nazwie Rzeka.txt i umieścić w nim tekst
-(polskie znaki nie są konieczne):
+### **Task 4.**
+Go back to the local folder and create a file called River.txt and place the text in it
+(Polish characters are not necessary):
 ```
 W rzece Heraklita
 ryba łowi ryby,
@@ -21,42 +26,42 @@ ryba ćwiartuje rybę ostrą rybą,
 ryba buduje rybę, ryba mieszka w rybie,
 ryba ucieka z oblężonej ryby.
 ```
-### **Zadanie 5.** 
-Dodaj nowy plik do repozytorium i wykonaj commit z opisem „ryba”
+### **Task 5.**
+Add a new file to the repository and commit with the description "fish"
 
-### **Zadanie 6.** 
-Ustaw jako zdalne repozytorium folder ../remote.
+### **Task 6.**
+Set the ../remote folder as the remote repository.
 
-### **Zadanie 7.**
-„Wypchnij” aktualną wersję repozytorium zawartą w folderze local do
-repozytorium zdalnego.
+### **Task 7.**
+"Push" the current version of the repository contained in the local do folder
+remote repository.
 
-### **Zadanie 8.**
-Zadeklaruj Git’owi, aby nie zawierał plików .doc w repozytorium i zapisz tą
-zmianę z opisem „ignorowanie .doc”.
+### **Task 8.**
+Declare Git not to include .doc files in the repository and save this one
+change with the description "ignore .doc".
 
-### **Zadanie 9.**
-Stwórz plik smieci.doc o treści: „nie ma tu nic ciekawego”.
+### **Task 9.**
+Create a file junk.doc with the following content: "there is nothing interesting here".
 
-### **Zadanie 10.**
-Zapisz log zmian w repozytorium w pliku log.txt po czym dodać go do
-repozytorium i zapisać z opisem „logi”.
+### **Task 10.**
+Save the log of changes in the repository in the log.txt file and add it to
+repository and save with the description "logs".
 
-### **Zadanie 11.** 
-Uaktualnij zdalne repozytorium.
+### **Task 11.**
+Update the remote repository.
 
-### **Zadanie 12.** 
-Zamień słowa „ryba” na „dorsz” w pliku Rzeka.txt .
+### **Task 12.**
+Replace the words "fish" with "cod" in the River.txt file.
 
-### **Zadanie 13.**
-Wygeneruj plik o nazwie roznica.txt zawierający różnice w stosunku do
-oryginału pliku.
+### **Task 13.**
+Generate a file called roznica.txt containing the differences from
+original file.
 
-### **Zadanie 14.**
-Przejdź do katalogu local2 i sklonuj do niego zawartość zdalnego repozytorium
+### **Task 14.**
+Change to the local2 directory and clone the contents of the remote repository to it
 remote.
-### **Zadanie 15.**
-Do pliku Rzeka.txt (w katalogu local2/remote) dodaj kolejną zwrotkę:
+### **Task 15.**
+Add another verse to the Rzeka.txt file (in the local2/remote directory):
 ```
 W rzece Heraklita
 ryba kocha rybę,
@@ -64,47 +69,47 @@ twoje oczy – powiada – lśnią jak ryby w niebie,
 chcę płynąć razem z tobą do wspólnego morza,
 najpiękniejsza z ławicy.
 ```
-### **Zadanie 16.**
-Zapisz zmiany lokalnie z opisem „druga zwrotka” po czym wyślij je do remote.
+### **Task 16.**
+Save the changes locally with the description "second verse" and then send them to the remote.
 
-### **Zadanie 17.**
-Wróć do folderu local i zapisać do repozytorium lokalnego tylko plik Rzeka.txt
-z opisem „dorsz”.
+### **Task 17.**
+Go back to the local folder and save only the River.txt file to the local repository
+with the description "cod".
 
-### **Zadanie 18.**
-Załóż nową gałąź „dorsz”.
+### **Task 18.**
+Create a new branch "cod".
 
-### **Zadanie 19.**
-Będąc nadal w master wyślij zmiany do remote - wymaga to rozwiązania
-konfliktu. W Rzeka.txt ma pozostać pierwsza zwrotka z „dorszami” oraz druga
-zwrotka oryginalna. Pozostaw domyślny opis commita.
+### **Task 19.**
+While still in master, send changes to remote - this requires a solution
+conflict. The first verse with "cods" and the second one will remain in Rzeka.txt
+original verse. Leave the default commit description.
 
-### **Zadanie 20.**
-Przejdź do nowo utworzonej gałęzi „dorsz” i po pierwszej zwrotce dopisz nową
-linię „Dorsz poszedł na solarium!”.
+### **Task 20.**
+Go to the newly created "cod" branch and add a new one after the first verse
+the line "Cod went to the solarium!".
 
-### **Zadanie 21.**
-Proszę dodać plik roznica.txt oraz Rzeka.txt w nowej wersji do repozytorium
-w nowej gałęzi z opisem „solarium” i wysłać do remote.
+### **Task 21.**
+Please add the file roznica.txt and Rzeka.txt in the new version to the repository
+in a new branch with the description "solarium" and send to remote.
 
-### **Zadanie 22.**
-Wróć do gałęzi master.
+### **Task 22.**
+Return to the master branch.
 
-### **Zadanie 23.**
-Jakiego pliku brakuje i dlaczego? Wyjaśnienie umieść w pliku wyjasnienie.txt
-oraz zapisać w repozytorium z opisem „wyjasnienie”.
+### **Task 23.**
+What file is missing and why? Place the explanation in the wyjaszanie.txt file
+and save to the repository with the description "explanation".
 
-### **Zadanie 24.**
-Dodaj trzecią zwrotkę, zapisz ją i wyślij do remote:
+### **Task 24.**
+Add a third verse, save it and send it to remote:
 ```
 W rzece Heraklita
 Ryba wymyśliła rybę nad rybami,
 Ryba klęka przed rybą, ryba śpiewa rybie,
 Prosi rybę o lżejsze pływanie.
 ```
-### **Zadanie 25.**
-Przejdź do folderu local2/remote i na końcu pliku dopisz „Ah ta ryba!”.
+### **Task 25.**
+Go to the local2/remote folder and add "Ah, that fish!" at the end of the file.
 
-### **Zadanie 26.** 
-Spakowany folder nazwany imieniem i nazwiskiem proszę wrzucić na serwis
-moodle.
+### **Task 26.**
+Please upload the packed folder with your name and surname to the website
+moodle
