@@ -1,12 +1,12 @@
 # TASK01
 
-### **Excercise 1.**
+### **Task 1.**
 Create a folder on your desktop with your name and place 3 directories in it: global, local and local2.
 
-### **Exercise 2.**
+### **Task 2.**
 Go to the local folder and create a new repository there.
 
-### **Exercise 3.**
+### **Task 3.**
 Go to the global folder and create a new global/remote repository there using the git init --bare command.
 
 ### **Task 4.**
