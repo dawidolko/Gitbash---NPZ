@@ -1,5 +1,5 @@
 ---
-redirect_to: gitbash.dawidolko.pl
+redirect_to: gb.dawidolko.pl
 ---
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=40&pause=1000&color=000000&width=600&height=70&lines=Gitbash)](https://github.com/dawidolko/Gitbash-NPZ)
