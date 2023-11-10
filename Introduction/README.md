@@ -1,376 +1,376 @@
-# System kontroli wersji GIT
+# GIT version control system
 
-## Spis treści:
-### 1. Wprowadzenie     
-  1.1. Linus Torvalds – twórca systemu GIT \
-  1.2. Najważniejsze cechy GITa \
-  1.3. Stany plików w GIT \
-  1.4. Terminologia \
-  1.5. Obiekty GITa \
-  1.6. Git Bash 
-### 2. Instalacja GITa 
-### 3. Konsola Git Bash 
-  3.1. Konfiguracja GITa \
-  3.2. Rejestrowanie zmian w repozytorium\
-  3.2.1. Sprawdzenie stanu plików w repozytorium\
-  3.2.2. Śledzenie nowych plików\
-  3.2.3. Dodawanie zmian do poczekalni\
-  3.2.4. Podgląd dokonanych zmian\
-  3.2.5. Zatwierdzanie zmian\
-  3.2.6. Historia zmian\
-  3.3. Rozszerzone mechanizmy\
-  3.3.1. Cofanie zmian\
-  3.3.2. Tagowanie źródeł\
-  3.3.3. Ignorowanie plików\
-  3.4. Gałęzie w Gicie\
-  3.4.1. Rozgałęzienie historii projektu\
-  3.4.2. Scalanie gałęzi (merge)\
-  3.4.3. Konflikty scalania\
-  3.5. Praca ze zdalnym repozytorium [remote]\
+## Contents:
+### 1. Introduction
+   1.1. Linus Torvalds – creator of the GIT system\
+   1.2. The most important features of GIT\
+   1.3. File states in GIT\
+   1.4. Terminology\
+   1.5. GITA objects\
+   1.6. GitBash
+### 2. GIT installation
+### 3. Git Bash Console
+   3.1. GIT configuration\
+   3.2. Logging changes to the repository\
+   3.2.1. Checking the status of files in the repository\
+   3.2.2. Tracking new files\
+   3.2.3. Adding changes to the waiting room\
+   3.2.4. Preview of changes made\
+   3.2.5. Committing changes\
+   3.2.6. Change history\
+   3.3. Extended mechanisms\
+   3.3.1. Undoing changes\
+   3.3.2. Source tagging\
+   3.3.3. Ignoring files\
+   3.4. Branches in Git\
+   3.4.1. Branching project history\
+   3.4.2. Merge branches\
+   3.4.3. Merge conflicts\
+   3.5. Working with a remote repository [remote]\
 
   
-## 1. Wprowadzenie
+## 1. Introduction
 
-System kontroli wersji (ang. version/revision control system) – oprogramowanie służące do śledzenia zmian głównie w kodzie źródłowym oraz pomocy programistom w łączeniu zmian dokonanych w plikach przez wiele osób w różnym czasie.
+Version control system - software used to track changes mainly to source code and to help programmers combine changes made to files by many people at different times.
 
-### 1.1. Linus Torvalds – twórca systemu GIT
-GIT to system kontroli wersji, będący wolnym oprogramowaniem o otwartym kodzie. Projektowany był z myślą o jednoczesnej pracy wielu ludzi nad jednym kodem.
-System GIT stworzył Linus Torvalds jako narzędzie wspomagające rozwój jądra Linux ponieważ wszystkie istniejące (darmowe) systemy kontroli wersji były niewystarczające. System ten miał być rozproszony, szybki, miał chronić przed błędami w repozytorium i nie posiadać wad CVS-a.
-Prace nad Gitem rozpoczęły się 3 kwietnia 2005 roku, projekt został ogłoszony 6 kwietnia, 7 kwietnia Git obsługiwał kontrolę wersji swojego własnego kodu, 18 kwietnia pierwszy raz wykonano łączenie kilku gałęzi kodu, 27 kwietnia Git został przetestowany pod względem szybkości z wynikiem 6,7 łat na sekundę, a 16 czerwca Linux 2.6.12 był hostowany przez Gita.
-Jak widać w pełni funkcjonalny system kontroli wersji powstał w niecały miesiąc. A ojcem tego sukcesu jest oczywiście sam Linus Torvalds, który większość projektu wykonał sam!
+### 1.1. Linus Torvalds – creator of the GIT system
+GIT is a version control system that is free and open source. It was designed with many people working on one code at the same time.
+GIT was created by Linus Torvalds as a tool to support the development of the Linux kernel because all existing (free) version control systems were insufficient. This system was supposed to be distributed, fast, protect against errors in the repository and not have the disadvantages of CVS.
+Work on Git began on April 3, 2005, the project was announced on April 6, on April 7 Git supported version control of its own code, on April 18 the merging of several code branches was performed for the first time, on April 27 Git was tested for speed with a result of 6.7 patches per second, and on June 16, Linux 2.6.12 was hosted by Git.
+As you can see, a fully functional version control system was created in less than a month. And the father of this success is, of course, Linus Torvalds himself, who did most of the project himself!
 
-### 1.2. Najważniejsze cechy GITa
-Do najważniejszych cech systemu GIT należą:
-● Dobre wsparcie dla rozgałęzionego procesu tworzenia oprogramowania: jest dostępnych kilka algorytmów łączenia zmian z dwóch gałęzi, a także możliwość dodawania własnych algorytmów.
+### 1.2. The most important features of GIT
+The most important features of the GIT system include:
+● Good support for branching software development: there are several algorithms available for combining changes from two branches, as well as the ability to add your own algorithms.
 
-● Praca off-line: każdy programista posiada własną kopię repozytorium, do której może zapisywać zmiany bez połączenia z siecią; następnie zmiany mogą być wymieniane między lokalnymi repozytoriami.
+● Off-line work: each programmer has his own copy of the repository to which he can save changes without a network connection; changes can then be exchanged between local repositories.
 
-● Wsparcie dla istniejących protokołów sieciowych: dane można wymieniać przez HTTP(S), FTP, rsync, SSH.
+● Support for existing network protocols: data can be exchanged via HTTP(S), FTP, rsync, SSH.
 
-● Efektywna praca z dużymi projektami: system Git według zapewnień Torvaldsa, a także według testów fundacji Mozilla, jest o rzędy wielkości szybszy niż niektóre konkurencyjne rozwiązania.
+● Work effectively with large projects: Git, according to Torvalds and Mozilla Foundation tests, is orders of magnitude faster than some competing solutions.
 
-● Wsparcie dla nieliniowego programowania (branche)
+● Support for non-linear programming (branches)
 
-● Adresowanie przez zawartość (SHA-1)
+● Addressing by content (SHA-1)
 
-### 1.3. Stany plików w GIT
-Aby móc pracować z GITem trzeba zrozumieć, w jakich stanach mogą znajdować się zarządzane przez system pliki. Git wprowadza trzy główne stany dla zmian: zmodyfikowany, śledzony oraz zatwierdzony.
-● zmodyfikowany – plik był edytowany, ale zmiana o tym nie została jeszcze nigdzie zapisana;
+### 1.3. File states in GIT
+To work with GIT, you need to understand what states the files managed by the system may be in. Git introduces three main states for changes: modified, tracked, and committed.
+● modified – the file has been edited, but the change has not been saved anywhere yet;
 
-● śledzony – zmodyfikowany plik został oznaczony do zatwierdzenia przy najbliższej operacji commit;
+● tracked – the modified file has been marked for approval in the next commit operation;
 
-● zatwierdzony – dokonana zmiana została zapisana i utrwalona w lokalnej bazie danych;
+● approved – the change made has been saved and persisted in the local database;
 
-Przesłanie zmian do zdalnego repozytorium jest już operacją opcjonalną.
+Sending changes to a remote repository is now an optional operation.
 
 <br>![picture](images/Picture1.png)
 
-● katalog Git – to trzon lokalnego repozytorium. W nim Git przechowuje metadane o plikach oraz obiektową bazę danych. Ten katalog jest kopiowany podczas klonowania repozytorium.
+● Git directory – this is the core of the local repository. In it, Git stores metadata about files and an object database. This directory is copied when cloning the repository.
 
-● katalog roboczy – jest to odtworzony obraz wersji projektu. To właśnie zawartość tego katalogu jest modyfikowana przez użytkownika.
+● working directory – this is a recreated image of the project version. It is the content of this directory that is modified by the user.
 
-● przechowalnia (stage) – to miejsce pośrednie, między katalogiem roboczym, a lokalną bazą danych. Dzięki niej można utrwalić tylko wybrane zmiany.
+● storage (stage) – this is an intermediate place between the working directory and the local database. Thanks to it, you can save only selected changes.
 
-### 1.4. Terminologia
-Podczas pracy z GITem możemy spotkać się z następującym nazewnictwem:
-● Branch - równoległa gałąź projektu rozwijana oddzielnie od głównej.
+### 1.4. Terminology
+When working with GIT, we may encounter the following nomenclature:
+● Branch - a parallel branch of the project developed separately from the main one.
 
-● Tag – marker konkretnej wersji (rewizja w SVN’ie) projektu.
+● Tag – a marker of a specific version (SVN revision) of the project.
 
-● Working Dir – katalog roboczy na którym pracujemy
+● Working Dir – working directory where we work
 
-● Index – rodzaj „cache”, czyli miejsca gdzie trzymane są zmiany do commita
+● Index – a type of "cache", i.e. a place where changes to the commit are kept
 
-● Master Branch – główny branch z którym łączymy (merge) nasze zmiany przed wysłaniem do zdalnego repozytorium.
+● Master Branch – the main branch with which we merge our changes before sending them to the remote repository.
 
-● Development Branch – gałąź na której łączone są gałęzie feature. Przy wyjściu kolejnej wersji mergowany jest z Master Branchem.
+● Development Branch – the branch on which feature branches are merged. When the next version is released, it is merged with the Master Branch.
 
-● Feature Branch – gałąź na której rozwijane jest konkretne narzędzie badź dodatek do głównego projektu.
+● Feature Branch – a branch on which a specific tool or addition to the main project is developed.
 
-● HotFix – branch tworzony na potrzeby szybkich poprawek, naprawienia niezgodności lub bugu.
+● HotFix – a branch created for quick fixes, fixing incompatibilities or bugs.
 
-### 1.5. Obiekty GITa
-● Commit – wskazuje na tree oraz ojca, zawiera przykładowo takie informacje jak autor, data i treść wiadomości.
+### 1.5. GIT objects
+● Commit – indicates tree and father, contains, for example, information such as author, date and content of the message.
 
-● Tree – reprezentuje stan pojedynczego katalogu (lista obiektów blob oraz zagnieżdżonych obiektów tree)
+● Tree – represents the state of a single directory (list of blobs and nested tree objects)
 
-● Blob – zawiera zawartość pliku bez żadnej dodatkowej struktury
+● Blob – contains the contents of the file without any additional structure
 
-● Tag – wskazuje na konkretny commit oraz zawiera opis taga.
+● Tag – indicates a specific commit and contains a description of the tag.
 
-### 1.6. Git Bash
-**Git Bash** to konsola systemu GIT, która umożliwia w pełni funkcjonalne zarządzanie repozytorium. Za pomocą odpowiednich komend konsolowych można m.in. tworzyć repozytorium, dodawać pliki, śledzić zmiany itd.
-Do najważniejszych poleceń Git Basha należą:
-● `git init [nazwa]` – tworzy nowe repozytorium lokalne.
+### 1.6. GitBash
+**Git Bash** is a GIT console that enables fully functional repository management. Using appropriate console commands you can, among others: create a repository, add files, track changes, etc.
+The most important Git Bash commands include:
+● `git init [name]` – creates a new local repository.
 
-● `git clone origin [link]` - klonuje repozytorium z serwera zdalnego na computer.
+● `git clone origin [link]` - clones the repository from a remote server to a computer.
 
-● `git remote add origin [link]` – dodaje repozytorium zdalne do repozytorium lokalnego.
+● `git remote add origin [link]` – adds a remote repository to the local repository.
 
-● `git add [plik]` – dodaje wszystkie zmienione pliki do staged area
+● `git add [file]` – adds all changed files to the staged area
 
-● `git checkout --` . – usuwa wszystkie pliki z staged area.
+● `git checkout --` . – removes all files from the staged area.
 
-● `git branch [nazwa]` – tworzy nowy branch
+● `git branch [name]` – creates a new branch
 
-● `git checkout –b [nazwa]` – tworzy nowy branch I ustawia go jako aktualny branch.
+● `git checkout –b [name]` – creates a new branch and sets it as the current branch.
 
-● `git checkout [nazwa]` – przełącza na wybrany branch
+● `git checkout [name]` – switches to the selected branch
 
-● `git commit –m ‘tytuł’ –m ‘opis’` – tworzy commit z plików w staged area o wybranym tytule oraz opisie.
+● `git commit –m ‘title’ –m ‘description’` – creates a commit from files in the staged area with the selected title and description.
 
-● `git push` – wypycha zmiany lokalne na serwer zdalny
+● `git push` – pushes local changes to a remote server
 
-● `git pull` – zaciąga oraz przyłącza zmiany z serwera zdalnego na serwer lokalny
+● `git pull` – pulls and joins changes from the remote server to the local server
 
-● `git fetch` – pobiera zmiany z repozytorium zdalnego, ale nie przyłącza ich do working directory.
+● `git fetch` – fetches changes from the remote repository, but does not attach them to the working directory.
 
-● `git merge` – łączy zmiany z dwóch różnych branchy, ścieżek, lub zmiany pobrane z repozytorium zdalnego za pomocą git fetch
+● `git merge` – combines changes from two different branches, paths, or changes downloaded from a remote repository using git fetch
 
-● `git stash save [plik]` – dodaje zmieniony plik do schowka
+● `git stash save [file]` – adds the changed file to the clipboard
 
-● `git stash apply` – dodaje zmiany ze schowka do working directory.
+● `git stash apply` – adds changes from the clipboard to the working directory.
 
-## 2. Instalacja GITa
-Klikamy **Next**:
+## 2. GIT installation
+Click **Next**:
 
 <br>![picture](images/Picture2.png)
 
-Wybieramy folder instalacji i klikamy **Next**:
+Select the installation folder and click **Next**:
 
 <br>![picture](images/Picture3.png)
 
-Wybieramy komponenty do zainstalowania (pozostawiamy domyślne) i klikamy **Next**:
+We select the components to be installed (leave the default ones) and click **Next**:
 
 <br>![picture](images/Picture4.png)
 
-Tworzenie folderu dla Gita w menu **Start**:
+Creating a folder for Git in the **Start** menu:
 
 <br>![picture](images/Picture5.png)
 
-Wybieramy edytor dla Gita np. **Notepad++**:
+We choose an editor for Git, e.g. **Notepad++**:
 
 <br>![picture](images/Picture6.png)
 
-Wybieramy ustawienia zmiennej środowiskowej **PATH**:
+We choose the settings of the **PATH** environment variable:
 
 <br>![picture](images/Picture7.png)
 
-Wybieramy ustawienia sieciowe dla **Gita**:
+We select network settings for **Git**:
 
 <br>![picture](images/Picture8.png)
 <br>![picture](images/Picture9.png)
 
-Wybieramy ustawienia znaku końca wiersza dla plików tekstowych:
+We choose the line break settings for text files:
 
 <br>![picture](images/Picture10.png)
 
-Wybieramy terminal:
+We choose the terminal:
 
 <br>![picture](images/Picture11.png)
 
-Opcje dodatkowe (domyślne):
+Additional options (default):
 
 <br>![picture](images/Picture12.png)
 
-Instalacja:
+Installation:
 
 <br>![picture](images/Picture13.png)
 
-Kończymy instalację i uruchamiamy **Git Bash**:
+We finish the installation and run **Git Bash**:
 
 <br>![picture](images/Picture14.png)
 
-## 3. Konsola Git Bash
+## 3. Git Bash Console
 
-## 3.1. Konfiguracja GITa
-Konfiguracja GITa sprowadza się do ustawienia nazwy użytkownika, adresu e-mail oraz inicjalizacji repozytorium.
-Do tego celu służą kolejno polecenia:
+## 3.1. GIT configuration
+GIT configuration comes down to setting the username, e-mail address and repository initialization.
+The following commands are used for this purpose:
 ```
-git config --global user.name "Twoje imię i nazwsko"
-git config --global user.email twój@email.com
+git config --global user.name "Your name and surname"
+git config --global user.email your@email.com
 git init
 ```
 
-Polecenia te należy wywołać będąc w katalogu, w którym chcemy utworzyć repozytorium.
+These commands should be invoked in the directory where we want to create the repository.
 
 <br>![picture](images/Picture15.png)
 
-W wyniku w wybranym folderze utworzony został ukryty katalog **.git** zawierający pliki konfiguracyjne GITa.
+As a result, a hidden **.git** directory containing GIT configuration files was created in the selected folder.
 
 <br>![picture](images/Picture16.png)
 
-`ZADANIE`
-Utwórz na pulpicie katalog o nazwie moje_repozytorium i zainicjalizuj go jako repozytorium GITa.
+`TASK`
+Create a directory on your desktop called my_repository and initialize it as a GIT repository.
 
-## 3.2. Rejestrowanie zmian w repozytorium
-Rejestrowanie zmian w repozytorium podzielone jest na kilka etapów bezpośrednio związanych z cyklem życia zmian.
-### 3.2.1. Sprawdzenie stanu plików w repozytorium
-Do sprawdzenia stanu plików w repozytorium (statusu) służy polecenie:
+## 3.2. Logging changes to the repository
+Registering changes in the repository is divided into several stages directly related to the life cycle of changes.
+### 3.2.1. Checking the status of files in the repository
+To check the status of files in the repository (status), use the following command:
 ```
 git status
 ```
 <br>![picture](images/Picture17.png)
-Jak można zauważyć, w naszym repozytorium nie ma żadnych plików, które są śledzone.
+As you can see, there are no files in our repository that are tracked.
 
-`ZADANIE`
+`TASK`
 
-Utwórz w katalogu repozytorium nowy plik tekstowy text.txt i zapisz w nim tekst Ala ma kota. Następnie sprawdź status plików w repozytorium.
-W wyniku wykonanych czynności otrzymujemy komunikat:
+Create a new text file text.txt in the repository directory and save the text Ala has a cat in it. Then check the status of the files in the repository.
+As a result of the actions performed, we receive the following message:
 
 <br>![picture](images/Picture18.png)
 
-GIT wykrył, że dodaliśmy nowy plik i ostrzega nas, że nie jest on jeszcze śledzony przez repozytorium.
+GIT has detected that we have added a new file and warns us that it is not yet tracked by the repository.
 
-### 3.2.2. Śledzenie nowych plików
-Aby rozpocząć śledzenie naszego pliku posłużymy się poleceniem
+### 3.2.2. Track new files
+To start tracing our file we will use the command
 ```
 git add
 ```
-Składnia polecenia:
-● `git add text.txt` – dodaje jeden wybrany plik
+Command syntax:
+● `git add text.txt` – adds one selected file
 
-● `git add` -A – dodaje wszystkie nieśledzone pliki
+● `git add` -A – adds all untracked files
 
-● `git add` . – dodaje do śledzenia bieżący katalog ze wszystkimi plikami i katalogami, które się w nim znajdują
+● `git add` . – adds the current directory with all files and directories in it to the trace
 
 <br>![picture](images/Picture19.png)
 
-Jak można zauważyć, status pliku **text.txt** zmienił się.
+As you can see, the status of the **text.txt** file has changed.
 
-`ZADANIE`
+`TASK`
 
-Dodaj do śledzenia plik **text.txt** i następnie sprawdź status repozytorium.
+Add the **text.txt** file to tracking and then check the repository status.
 
-### 3.2.3. Dodawanie zmian do poczekalni
-Jak zostało wcześniej napisane, GIT operuje na pojedynczych zmianach, a nie na plikach. Bardzo dobrze to widać podczas dodawania plików do poczekalni.
+### 3.2.3. Adding changes to the waiting room
+As previously written, GIT operates on individual changes, not on files. This is very visible when adding files to the waiting room.
 
-`ZADANIE`
+`TASK`
 
-Zmodyfikuj plik **text.txt** dodając do niego kolejną linię tekstu: Kot ma Alę. Następnie sprawdź status plików w repozytorium.
-Ponowne wywołanie git status pokazuje, że plik **text.txt** jest jednocześnie w dwóch sekcjach:
+Modify the **text.txt** file by adding another line of text: The cat has Ala. Then check the status of the files in the repository.
+Calling git status again shows that the **text.txt** file is in two sections at the same time:
 
 <br>![picture](images/Picture20.png)
 
-Dzieje się tak, ponieważ GIT umieszcza plik w poczekalni w dokładnie takiej wersji, w jakiej znajdował się podczas odpalenia komendy git add. Jeżeli w tym momencie zostanie uruchomiona komenda git commit to zatwierdzona zostanie wersja z poczekalni, a nie ta widoczna w katalogu roboczym.
-Żeby zaktualizować plik w poczekalni, trzeba go zwyczajnie jeszcze raz dodać przez `git add`.
+This happens because GIT puts the file in the waiting room in the exact version it was in when the git add command was run. If the git commit command is run at this point, the version from the waiting room will be committed, not the one visible in the working directory.
+To update a file in the waiting room, you simply need to add it again using `git add`.
 
 <br>![picture](images/Picture21.png)
 
-Wykorzystanie poczekalni w procesie zatwierdzania zmian daje ogromne możliwości, dzięki temu można wybrać, które konkretnie modyfikacje chce się zatwierdzić i utrwalić w repozytorium.
+The use of the waiting room in the process of approving changes offers enormous possibilities, thanks to which you can choose which specific modifications you want to approve and save in the repository.
 
-`ZADANIE`
+`TASK`
 
-Zaktualizuj plik **text.txt** poprzez wywołanie komendy `git add`. Sprawdź status plików.
+Update the **text.txt** file by running the `git add` command. Check file status.
 
-### 3.2.4. Podgląd dokonanych zmian
-Jest to bardzo ważna funkcjonalność. Przed zatwierdzeniem zmian zawsze warto zweryfikować, czy wszystko poszło zgodnie z planem. Może się zdarzyć, że zmiany zostały zrobione nie w tym miejscu, co trzeba lub pojawiły się jakieś dodatkowe wygenerowane pliki, których nie chcemy utrwalać w repozytorium. Dzięki weryfikacji zmian w podglądzie można uniknąć tego typu błędów.
-Polecenie git status dostarczy tylko informacji, które pliki zostały zmodyfikowane, natomiast dzięki git diff można dokładnie zobaczyć te zmiany.
-● różnica między katalogiem roboczym a poczekalnią – `git diff`
-● różnica między poczekalnią a repozytorium – `git diff --cached`
-`ZADANIE`
+### 3.2.4. Preview of changes made
+This is a very important functionality. Before committing changes, it is always worth verifying that everything went according to plan. It may happen that the changes were made in the wrong place or there were some additional generated files that we do not want to be saved in the repository. By verifying changes in the preview, you can avoid these types of errors.
+The git status command will only provide information about which files have been modified, but with git diff you can see these changes in detail.
+● difference between working directory and waiting room – `git diff`
+● difference between waiting room and repository – `git diff --cached`
+`TASK`
 
 <br>![picture](images/Picture22.png)
 
-Sprawdzić działanie poleceń z punktu 3.2.4
+Check the operation of the commands from point 3.2.4
 
-### 3.2.5. Zatwierdzanie zmian
-Jeżeli mamy już pewność, że dokonane zmiany są poprawne, można utrwalić je w lokalnym repozytorium. W tym celu posłużymy się komendą
+### 3.2.5. Approve changes
+Once we are sure that the changes we have made are correct, we can save them to the local repository. For this purpose we will use the command
 ```
 git commit
 ```
-Wywołanie komendy bez żadnych argumentów uruchomi najpierw domyślny edytor tekstowy w celu podania komentarza dla zatwierdzanych zmian.
-Opcjonalnie można podać komentarz jako argument już przy samym wywołaniu komendy:
+Invoking the command without any arguments will first launch the default text editor to provide comments for the changes being committed.
+Optionally, you can provide a comment as an argument when running the command:
 ```
-git commit -m „komentarz”
+git commit -m "comment"
 ```
-Po potwierdzeniu zmiany zostaną zapisane w repozytorium w postaci nowej migawki.
+Once confirmed, the changes will be saved to the repository as a new snapshot.
 
 <br>![picture](images/Picture23.png)
 
-### 3.2.6. Historia zmian
-Do przeglądania historii zmian służy polecenie:
+### 3.2.6. change history
+To view the change history, use the command:
 ```
-git log
+gitlog
 ```
-Domyślnie log bez podania żadnych argumentów wyświetla zmiany od najnowszego do najstarszego.
+By default, the log displays changes from the newest to the oldest without providing any arguments.
 
 <br>![picture](images/Picture24.png)
 
-Polecenie log jest bardzo rozbudowane i zawiera wiele opcji konfiguracyjnych, ich pełną listę można znaleźć korzystając z pomocy:
+The log command is very extensive and contains many configuration options, their full list can be found using the help:
 ```
 git help log
 ```
-Jedną z najprzydatniejszych opcji jest -p. Pokazuje ona różnice wprowadzone z każdą rewizją. Dodatkowo można użyć opcji -2 aby ograniczyć zbiór do dwóch ostatnich wpisów:
+One of the most useful options is -p. It shows the differences introduced with each revision. Additionally, you can use the -2 option to limit the set to the last two entries:
 
 <br>![picture](images/Picture25.png)
 
-Opcja spowodowała wyświetlanie tych samych informacji z tą różnicą, że bezpośrednio po każdym wpisie został pokazywany tzw. diff, czyli różnica. Jest to szczególnie przydatne podczas recenzowania kodu albo szybkiego przeglądania zmian dokonanych przez współpracowników. Dodatkowo można skorzystać z całej serii opcji podsumowujących wynik działania git log. Na przykład, aby zobaczyć skrócone statystyki każdej z zatwierdzonych zmian należy użyć opcji --stat:
+The option resulted in the display of the same information, with the difference that the so-called diff, i.e. difference. This is especially useful when reviewing code or quickly reviewing changes made by colleagues. Additionally, you can use a whole series of options summarizing the result of git log. For example, to see summary statistics for each committed change, use the --stat option:
 
 <br>![picture](images/Picture26.png)
 
-Przydatnymi opcjami są również --since oraz --until. Wprowadzają one ograniczenia czasu dla wyświetlanych logów, np. wyświetlenie informacji o zmianach dokonanych w ciągu ostatnich kilkunastu minut:
+--since and --until are also useful options. They introduce time limits for displayed logs, e.g. displaying information about changes made in the last dozen or so minutes:
 
 <br>![picture](images/Picture27.png)
 
-Polecenie to obsługuje mnóstwo formatów - można uściślić konkretną datę (np. "2008-01-15") lub podać datę względną jak np. 2 lata 1 dzień 3 minuty temu.
-Można także odfiltrować listę pozostawiając jedynie rewizje spełniające odpowiednie kryteria wyszukiwania. Opcja --author pozwala wybierać po konkretnym autorze, a opcja --grep na wyszukiwanie po słowach kluczowych zawartych w notkach zmian.
+This command supports many formats - you can specify a specific date (e.g. "2008-01-15") or provide a relative date such as 2 years 1 day 3 minutes ago.
+You can also filter the list, leaving only the commits that meet the appropriate search criteria. The --author option allows you to select by a specific author, and the --grep option allows you to search by keywords contained in change notes.
 
 <br>![picture](images/Picture28.png)
 <br>![picture](images/Picture29.png)
 
-Jeżeli potrzebujemy określić zarówno autora jak i słowa kluczowe, musimy dodać opcję --all-match - w przeciwnym razie polecenie dopasuje jedynie wg jednego z kryteriów.
+If we need to specify both the author and the keywords, we must add the --all-match option - otherwise the command will match only according to one of the criteria.
 
 <br>![picture](images/Picture30.png)
 
-`ZADANIE`
+`TASK`
 
-Utworzyć kolejny plik **text2.txt** i dodać go do repozytorium oraz zacomitować zmiany (komentarz dowolny). Następnie zmodyfikować plik **text2.txt** umieszczając w nim tekst: Stoi na stacji lokomotywa. Dodać zmiany (add). Dodać kolejną linie tekstu w pliku **tekst2.txt**: Ciężka, ogromna i pot z niej spływa – tłusta oliwa. Dodać zmiany i wykonać commit. Sprawdzić działanie polecenia git log z różnymi opcjami, o których mowa w tym podrozdziale.
+Create another file **text2.txt** and add it to the repository and commit the changes (any comment). Then modify the **text2.txt** file with the text: There is a locomotive at the station. Add changes (add). Add another line of text in the file **text2.txt**: Heavy, huge and sweat flows from it - oily oil. Add changes and commit. Test the git log command with the various options mentioned in this section.
 
-## 3.3. Rozszerzone mechanizmy
-### 3.3.1. Cofanie zmian
-W celu wycofania zmian, które zostały już wysłane do zdalnego repozytorium, można skorzystać z commitów wycofujących. Ten mechanizm nie modyfikuje historii, a generuje commit, który jest przeciwieństwem zmiany, którą chcemy wycofać. Służy do tego polecenie:
+## 3.3. Extended mechanisms
+### 3.3.1. Undoing changes
+Rollback commits can be used to roll back changes that have already been pushed to the remote repository. This mechanism does not modify the history, but generates a commit, which is the opposite of the change we want to roll back. The command for this is:
 ```
-git revert [opcje]
+git revert [options]
 ```
 
 <br>![picture](images/Picture31.png)
 
-Powyższe wywołanie cofa ostatni commit w rewizji HEAD.
+The above call undoes the last commit in the HEAD revision.
 
-`ZADANIE`
+`TASK`
 
-Dodać do pliku **text2.txt** kolejną linię tekstu: ciuch, ciuch. Dodać zmiany i wykonać commit. Następnie dodać jeszcze jedną linię: lokomotywa odjeżdża i również dodać zmiany i wykonać commit. Dalej wycofać ostatnie 2 commity i sprawdzić zawartość pliku **text2.txt**.
-Usunąć plik **text.txt** i zatwierdzić zmiany wykonując polecenia add i commit. Następnie wycofać ostatni commit i sprawdzić zawartość repozytorium. Sprawdzić historię zmian w repozytorium.
+Add another line of text to the **text2.txt** file: chop, chop. Add changes and commit. Then add one more line: the locomotive is leaving and also add the changes and commit. Next, roll back the last 2 commits and check the contents of the **text2.txt** file.
+Delete the **text.txt** file and commit the changes by executing the add and commit commands. Then roll back the last commit and check the contents of the repository. Check the change history in the repository.
 
-### 3.3.2. Tagowanie źródeł
-Tagowanie (etykietowanie) źródeł to mechanizm pozwalający na oznaczenie ważniejszych miejsc w historii zmian projektu. Najczęściej jest wykorzystywany do oznaczania wersji aplikacji (np. wersja 3.1.5, itp). Git posiada dwa rodzaje etykiet: lekkie oraz opisane. Dla nas ważne będą lekkie.
-W celu oznaczenia aktualnych źródeł nowym tagiem wpisujemy komendę:
+### 3.3.2. Source tagging
+Source tagging is a mechanism that allows you to mark more important places in the project's change history. It is most often used to mark the application version (e.g. version 3.1.5, etc.). Git has two types of labels: light and descriptive. Light weight will be important for us.
+To mark current sources with a new tag, enter the command:
 ```
-git tag [nazwa-taga]
+git tag [tag-name]
 ```
-Natomiast sama komenda git tag, bez podania żadnych argumentów, wyświetli listę wszystkich znanych tagów.
+However, the git tag command itself, without providing any arguments, will display a list of all known tags.
 
-`ZADANIE`
+`TASK`
 
-Utworzyć etykietę dla bieżącej wersji repozytorium. Następnie dokonać kilku zmian w repozytorium wraz z commitami i otagować każdy commit. Wyświetlić listę tagów.
+Create a label for the current version of the repository. Then make some changes to the repository along with the commits and tag each commit. View a list of tags.
 
-### 3.3.3. Ignorowanie plików
-W większości projektów mamy do czynienia z plikami, których nie chcemy wersjonować. Są to np. pliki generowane automatycznie. Dodanie ich do repozytorium powoduje tylko zaciemnienie obrazu wprowadzanych zmian.
-Można, co prawda, pomijać tego typu pliki przy zatwierdzaniu zmian, jednak nie jest to zbyt pragmatyczne podejście. Dużo lepszym wyjściem jest oznaczenie takiej klasy plików jako ignorowane. Od tego momentu nie będą nawet widoczne jako pliki zmodyfikowane.
-Mechanizm ignorowana plików oparty jest o plik tekstowy **.gitignore**. Poniżej przykładowa zawartość:
+### 3.3.3. Ignoring files
+In most projects we deal with files that we do not want to version. These are, for example, automatically generated files. Adding them to the repository only obscures the picture of the changes being made.
+It is true that you can omit these types of files when committing changes, but this is not a very pragmatic approach. A much better solution is to mark such a file class as ignored. From this point on, they won't even be visible as modified files.
+The file ignore mechanism is based on the **.gitignore** text file. Below is sample content:
 ```
-*.tmp #komentarz
-Tmp #komentarz2
+*.tmp #comment
+Tmp #comment2
 ```
-Kolejne klasy ignorowanych plików wpisujemy w osobnych linijkach. Pierwsza linijka odpowiedzialna jest za ignorowanie wszystkich plików o rozszerzeniu .tmp, natomiast druga za cały katalog tmp oraz jego zawartość.
-Warto już na starcie zdefiniować, które pliki mają być ignorowane. Pozwoli to w przyszłości na uniknięcie zabawy z niepotrzebnymi plikami.
-Ponieważ plik **.gitignore** jest zwykłym plikiem tekstowym przechowywanym w głównym katalogu repozytorium, on również może podlegać wersjonowaniu. Po jego dodaniu lub modyfikacji warto zacommitować naniesione zmiany lub jego też oznaczyć do ignorowania.
+We enter subsequent classes of ignored files in separate lines. The first line is responsible for ignoring all files with the .tmp extension, while the second one is responsible for the entire tmp directory and its contents.
+It is worth defining at the very beginning which files are to be ignored. This will allow you to avoid messing with unnecessary files in the future.
+Since the **.gitignore** file is a plain text file stored in the root directory of the repository, it can also be versioned. After adding or modifying it, it is worth committing the changes or marking it for ignoring.
 
-`ZADANIE`
+`TASK`
 
-Utworzyć plik **.gitignore** i umieścić w nim kilka rozszerzeń plików (np. *.tmp, *.inf) oraz katalog np. temp. Wykonać commit. Następnie dodać do repozytorium po 1 pliku z każdym z ignorowanych
-rozszerzeń oraz katalog podany do ignorowania. W katalogu tym powinno znajdować się kilka plików. Sprawdzić status repozytorium, tzn. czy są jakieś zmiany widziane przez GITa.
+Create a **.gitignore** file and put several file extensions in it (e.g. *.tmp, *.inf) and a directory, e.g. temp. Make a commit. Then add 1 file with each ignored file to the repository
+extensions and a directory specified to be ignored. There should be several files in this directory. Check the status of the repository, i.e. whether there are any changes seen by GIT.
 
 ## 3.4. Gałęzie w Gicie
 Rozgałęzianie projektu (np. kodu programu) to jedna z ważniejszych funkcjonalności GITa. Praca z gałęziami (branch) jest bardzo szybka, w odróżnieniu od innych podobnych rozwiązań. Gałąź w Gicie została zaimplementowana jako lekki, przesuwalny wskaźnik na miejsce w historii.
@@ -394,212 +394,211 @@ git checkout [nazwa-brancha]
 
 <br>![picture](images/Picture33.png)
 
-Jak można zauważyć, nazwa aktywnego brancha wyświetlana jest również w nawiasach na końcu ścieżki przed znakiem zachęty.
+As you can see, the name of the active branch is also displayed in parentheses at the end of the path before the prompt.
 
-`ZADANIE`
+`TASK`
 
-Utworzyć nowy branch o nazwie new_branch. Przejść do nowo utworzonej gałęzi. Następnie utworzyć plik tekstowy n_branch.txt i zapisać w nim tekst: Nowy branch. Zastosować wprowadzone zmiany w repozytorium (dodać plik i zacommitować).
-### 3.4.1. Rozgałęzienie historii projektu
-Czasami zachodzi potrzeba rozwidlenia historii projektu, żeby móc np. rozwijać na osobnej gałęzi nową funkcjonalność, jednocześnie nie przeszkadzając innym w pracy. Wprowadzane w ten sposób zmiany są od siebie niezależne, łączy je tylko wspólny punkt w historii.
-Żeby to lepiej zademonstrować, utworzony zostanie nowy branch feature, do którego wprowadzona zostanie nowa funkcjonalność, natomiast do brancha master szybka poprawka hotfix.
-Ogólnie przyjętym zwyczajem jest rozwijanie nowych, niestabilnych funkcjonalności na osobnych branchach, żeby zachować jak największą stabilność głównej gałęzi master.
-### 3.4.1.1. Nowa funkcjonalność
-W naszym przykładzie nowa funkcjonalność będzie polegała na dodaniu nowej linii tekstu do pliku feature.txt. Ponieważ plik ten nie istnieje, dlatego musimy go utworzyć w branchu master i utworzyć dla niego historię zmian poprzez modyfikację jego zawartości.
+Create a new branch called new_branch. Go to the newly created branch. Then create a text file n_branch.txt and save the text in it: New branch. Apply the changes made to the repository (add a file and commit).
+### 3.4.1. Branching out the design story
+Sometimes there is a need to fork the project's history in order to be able to, for example, develop new functionality on a separate branch without disturbing others in their work. The changes introduced in this way are independent of each other, they are connected only by a common point in history.
+To better demonstrate this, a new feature branch will be created to which the new functionality will be introduced, and a quick hotfix will be added to the master branch.
+It is generally accepted practice to develop new, unstable functionalities on separate branches to maintain the greatest possible stability of the main master branch.
+### 3.4.1.1. New functionality
+In our example, the new functionality will consist in adding a new line of text to the feature.txt file. Since this file does not exist, we need to create it in the master branch and create a change history for it by modifying its content.
 
-`ZADANIE`
+`TASK`
 
-W branchu master utworzyć nowy plik o nazwie feature.txt i umieścić w nim tekst: Linia 1. Dodać plik do repozytorium i zacommitować zmiany. Następnie w nowych liniach tego pliku dodać tekst: Linia 2 i Linia 3. Ponownie zatwierdzić wszystkie zmiany.
-Utworzyć nową gałąź o nazwie feature i przejść do niej. Do pliku feature.txt dodać linię tekstu: Funkcjonalność w branchu feature. Zacommitować zmiany. (Zob. rys. poniżej).
+In the master branch, create a new file called feature.txt and put the text in it: Line 1. Add the file to the repository and commit the changes. Then add the text in new lines of this file: Line 2 and Line 3. Confirm all changes again.
+Create a new branch called feature and switch to it. Add a line of text to the feature.txt file: Functionality in the feature branch. Commit changes. (See figure below).
 
 <br>![picture](images/Picture34.png)
 
-Zamiast 2 komend:
+Instead of 2 commands:
 ```
 git branch feature
 git checkout feature
 ```
-można użyć jednej, która jednocześnie tworzy nowy branch i przechodzi do niego:
+you can use one that simultaneously creates a new branch and goes to it:
 ```
 git checkout -b feature
 ```
 
-### 3.4.1.2. Szybka poprawka Hot Fix
-W momencie pracy nad nową funkcjonalnością może się zdarzyć, że np. zostanie wykryty jakiś błąd w wersji podstawowej projektu (która już działa i jest wykorzystywana przez klienta) i konieczne będzie naniesienie poprawek. Funkcjonalność w branchu feature jest jednak w fazie, w której jej zakończenie jest niemożliwe. Nie możemy zatem nanieść żądanych poprawek i zakończyć brancha feature (scalić z master). W takim przypadku przełączamy się na branch master, gdzie nie ma jeszcze nowej funkcjonalności i tam wprowadzamy konieczne poprawki.
-Dzięki temu zabiegowi mamy działającą wersję w gałęzi master wraz z naniesionymi poprawkami oraz spokojnie możemy kontynuować pracę nad nową funkcjonalnością w branchu feature.
+### 3.4.1.2. Quick Hot Fix
+When working on a new functionality, it may happen that, for example, an error is detected in the basic version of the project (which is already working and used by the client) and it will be necessary to make corrections. However, the functionality in the feature branch is in a phase where it is impossible to complete it. Therefore, we cannot make the desired corrections and finish the feature branch (merge with master). In such a case, we switch to the master branch where the new functionality is not yet available and make the necessary corrections there.
+Thanks to this, we have a working version in the master branch with the corrections made, and we can safely continue working on the new functionality in the feature branch.
 
-`ZADANIE`
+`TASK`
 
-Przełączyć się na branch master, dodać w pliku feature.txt linię tekstu: Poprawka HotFix. Linia ta powinna znajdować się między liniami 1 i 2. Zacommitować zmiany.
+Switch to branch master, add a line of text in the feature.txt file: HotFix. This line should be between lines 1 and 2. Commit the changes.
 
 <br>![picture](images/Picture35.png)
 
-### 3.4.2. Scalanie gałęzi (merge)
-Do naszej głównej gałęzi projektu została wprowadzona poprawka i można spokojnie wrócić do pracy nad rozwojem projektu. Chcielibyśmy jednak pracować na możliwie najnowszych źródłach, dlatego potrzebujemy również zmian, które zostały wprowadzone w gałęzi master.
-Jednym z możliwych sposobów, by to osiągnąć, jest **zmerge’owanie** gałęzi master do gałęzi feature. W tym celu przechodzimy do gałęzi feature i wywołujemy komendę
+### 3.4.2. Merging branches
+A fix has been made to our main project branch and you can safely get back to work on project development. However, we would like to work with the latest sources possible, so we also need the changes that have been made in the master branch.
+One possible way to achieve this is to **merge** the master branch into the feature branch. To do this, we go to the feature branch and run the command
 ```
 git merge master
 ```
 
 <br>![picture](images/Picture36.png)
 
-Udało się automatycznie przenieść wszystkie zmiany z master do feature. Czasami jednak mogą wystąpić konflikty, ale do tego wrócimy.
-Kończymy rozwijanie nowej funkcjonalności. Teraz można gotową funkcjonalność zacommitować i zmerge’ować do gałęzi master.
+We managed to automatically transfer all changes from master to feature. However, sometimes conflicts may arise, but we will come back to this.
+We are finishing developing the new functionality. Now you can commit the finished functionality and merge it to the master branch.
 
-`ZADANIE`
+`TASK`
 
-Będąc w gałęzi feature dodać na końcu pliku feature.txt następującą linię tekstu: Zakończenie funkcjonalności feature. Zacommitować zmiany. Scalić gałąź feature z gałęzią master wykorzystując polecenie:
+While in the feature branch, add the following line of text to the end of the feature.txt file: End of feature functionality. Commit changes. Merge the feature branch with the master branch using the command:
 ```
 git merge feature
 ```
-UWAGA: Polecenie to należy wykonać po przełączeniu się na gałąź master.
+NOTE: This command must be executed after switching to the master branch.
 
 <br>![picture](images/Picture37.png)
 
-Wszystkie zmiany zostały naniesione na gałąź master. Tym razem jednak nie powstał commit merge’owy, ponieważ git mógł skorzystać z mechanizmu Fast-forward. Stało się tak, ponieważ podczas łączenia zmian wystarczyło przesunąć wskaźnik gałęzi i nie trzeba było wykonywać pełnego merge’owania zmian.
-Po zmerge’owaniu brancha z nową funkcjonalnością można już go usunąć:
+All changes have been applied to the master branch. This time, however, there was no merge commit because git could use the Fast-forward mechanism. This happened because when merging changes, all you had to do was move the branch pointer and you didn't have to do a full merge of the changes.
+After merging the branch with the new functionality, you can delete it:
 
 <br>![picture](images/Picture38.png)
 
-Jak widać na powyższym obrazku, pozostał tylko branch master.
+As you can see in the image above, only the master branch remains.
+### 3.4.3. Merge conflicts
+However, merging branches does not always go smoothly. We then have code conflicts that need to be resolved. This most often happens if a given piece of code will be edited on both branches.
 
-### 3.4.3. Konflikty scalania
-Nie zawsze jednak scalanie gałęzi przebiega bezproblemowo. Mamy wtedy do czynienia z konfliktami w kodzie, które należy rozwiązać. Dzieje się tak najczęściej, jeżeli dany fragment kodu będzie edytowany na obu gałęziach.
+`TASK`
 
-`ZADANIE`
-
-W gałęzi master utworzyć plik main.cpp i umieścić w nim kod:
+In the master branch, create a main.cpp file and put the code in it:
 ```
 int a = 2;
 int b = 3;
 
 int main(void)
 {
-  if(a+b>5)
-    return 1;
-  else
-    return 0;
+   if(a+b>5)
+     return 1;
+   else
+     return 0;
 }
 ```
-Dodać zmiany do repozytorium i zacommitować je. Utworzyć nową gałąź o nazwie my_branch (nie przechodzić do niej, pozostać w master!)
-Następnie zmodyfikować kod przypisując do zmiennej b wartość 4 i wykonać commit zgodnie z poniższym rysunkiem:
+Add the changes to the repository and commit them. Create a new branch called my_branch (don't go to it, stay in master!)
+Then modify the code by assigning the value 4 to the b variable and commit as shown in the figure below:
 
 <br>![picture](images/Picture39.png)
 
-Przejść do gałęzi my_branch i zmodyfikować kod programu przypisując do zmiennej b wartość 0. Wykonać commit:
+Go to the my_branch branch and modify the program code by assigning the value 0 to the b variable. Make a commit:
 
 <br>![picture](images/Picture40.png)
 
-Pozostając w gałęzi my_branch scalić ją z gałęzią master:
+Staying in the my_branch branch, merge it with the master branch:
 
 <br>![picture](images/Picture41.png)
 
-Podczas próby automatycznego merge’owania wystąpił konflikt i będziemy musieli dokonać ręcznego połączenia zmian. Sprawdźmy status repozytorium:
+A conflict occurred while trying to automatically merge and we will have to manually merge the changes. Let's check the status of the repository:
 
 <br>![picture](images/Picture42.png)
 
-Otrzymujemy szersze informacje o konflikcie, m.in. że dotyczy on pliku main.cpp. Ponadto zawartość pliku konfliktowego zmieniła się:
+We receive more information about the conflict, including: that it concerns the main.cpp file. Additionally, the content of the conflict file has changed:
 
 <br>![picture](images/Picture43.png)
 
-GIT umieścił kod z obu gałęzi między specjalnymi znacznikami.
-Teraz należy rozwiązać konflikt poprzez poprawienie kodu oraz zacommitowanie go do repozytorium. Trzeba też usunąć znaczniki dodane podczas merge’owania.
-Przeniesienie pliku do poczekalni oznacza w Gicie rozwiązanie konfliktu.
+GIT placed code from both branches between special tags.
+Now you need to resolve the conflict by correcting the code and committing it to the repository. You also need to remove tags added during merge.
+Moving a file to the waiting room means that the conflict is resolved in Git.
 
-`ZADANIE`
+`TASK`
 
-Rozwiązać konflikt, który wystąpił podczas merge’owania poprzez pozostawienie linii kodu z wartością b=4 oraz usunięcie zbędnych linii w pliku main.cpp. Zacommitować zmiany i sprawdzić status repozytorium:
+Resolve the conflict that occurred during merge by leaving the line of code with the value b=4 and removing unnecessary lines in the main.cpp file. Commit changes and check the repository status:
 
 <br>![picture](images/Picture44.png)
 
-### 3.4.3.1. Narzędzia graficzne do rozwiązywani konfliktów (mergetool)
-Istnieje również możliwość rozwiązania konfliktów, wspomagając się narzędziami graficznymi. Zamiast edytować pliki ręcznie, wystarczy uruchomić komendy:
+### 3.4.3.1. Graphical conflict resolution tools (mergetool)
+It is also possible to resolve conflicts using graphical tools. Instead of editing files manually, just run the commands:
 ```
 git config –global merge.tool kdiff3
-git mergetool
+gitmergetool
 ```
-Pierwsza komenda ustawia domyślny edytor na kdiff3, a druga go wywołuje. Można też posłużyć się innym narzędziem, np.: opendiff, kdiff3, tkdiff, xxdiff, meld, tortoisemerge, gvimdiff, diffuse, diffmerge, ecmerge, p4merge, codecompare, emerge, vimdiff.
-Po rozwiązaniu konfliktu i zapisaniu plików z poziomu wybranego narzędzia można już zacommitować zmiany.
+The first command sets the default editor to kdiff3, and the second command invokes it. You can also use another tool, e.g.: opendiff, kdiff3, tkdiff, xxdiff, meld, tortoisemerge, gvimdiff, diffuse, diffmerge, ecmerge, p4merge, codecompare, emerge, vimdiff.
+After resolving the conflict and saving the files using the selected tool, you can commit the changes.
 
-## 3.5. Praca ze zdalnym repozytorium [remote]
-Dzięki wykorzystaniu możliwości zdalnego repozytorium można współpracować z innymi osobami, nie ograniczając się już tylko do pracy na jednym komputerze. Git umożliwia współpracę jednocześnie z kilkoma różnymi zdalnymi repozytoriami. Można z nich pobierać kod, wysyłać swoje zmiany oraz zarządzać gałęziami kodu itp.
+## 3.5. Working with a remote repository [remote]
+By using the capabilities of a remote repository, you can collaborate with other people and are no longer limited to working on one computer. Git allows you to work with several different remote repositories at the same time. You can download code from them, submit your changes, manage code branches, etc.
 
-### 3.5.1. Wyświetlanie zdalnych repozytoriów
-Żeby wyświetlić listę wszystkich skonfigurowanych zdalnych repozytoriów, należy użyć komendy:
+### 3.5.1. View remote repositories
+To list all configured remote repositories, use the command:
 ```
 git remote
 ```
-lub aby wyświetlić szersze informacje o zdalnych repozytoriach:
+or to view more information about remote repositories:
 ```
 git remote -v
 ```
 
 <br>![picture](images/Picture45.png)
 
-### 3.5.2. Dodawanie zdalnego repozytorium
-Konfiguracja nowego zdalnego repozytorium polega na wywołaniu komendy w ogólnym formacie:
+### 3.5.2. Adding a remote repository
+Configuring a new remote repository involves issuing a command in the general format:
 ```
-git remote add [skrót] [url]
+git remote add [shortcut] [url]
 ```
-Od tego momentu nowe zdalne repozytorium jest już dowiązane do naszego lokalnego.
+From now on, the new remote repository is linked to our local one.
 
 <br>![picture](images/Picture46.png)
 
-Wyświetlenie informacji dotyczących zdalnego repozytorium:
+View information about a remote repository:
 ```
-git remote show [skrót]
+git remote show [shortcut]
 ```
 
 <br>![picture](images/Picture47.png)
 
-### 3.5.3. Pobranie zmian z globalnego repozytorium
-Należy zauważyć, że **pobranie zmian ze zdalnego repozytorium oraz połączenie ich z lokalnym repozytorium to dwie całkowicie niezależne czynności.**
-Polecenie
+### 3.5.3. Downloading changes from the global repository
+Please note that **pulling changes from the remote repository and linking them to the local repository are two completely independent activities.**
+Recommendation
 ```
-git fetch [skrót]
+git fetch [shortcut]
 ```
-pobiera wszystkie zmiany, których jeszcze nie było lokalnie.
-Po wykonaniu tego polecenia zawartość lokalnego repozytorium nie uległa zmianie - GIT nie zmodyfikował jeszcze lokalnej kopii repozytorium. Konieczne jest jeszcze naniesienie pobranych zmian na lokalne repozytorium. W tym celu wykorzystać można merge’owanie:
+downloads all changes that have not yet been made locally.
+After executing this command, the contents of the local repository have not changed - GIT has not yet modified the local copy of the repository. It is still necessary to apply the downloaded changes to the local repository. For this purpose, you can use merge:
 ```
-git merge [skrót]/[branch]
+git merge [shortcut]/[branch]
 ```
 
 <br>![picture](images/Picture48.png)
 
-W tym momencie może oczywiście dojść do konfliktów, jednak ich rozwiązywanie przebiega analogicznie jak przy łączeniu lokalnych gałęzi.
-Powyższe dwa kroki zazwyczaj są wykonywane bezpośrednio po sobie, dlatego zostały połączone w jedną komendę:
+At this point, of course, conflicts may arise, but their resolution is the same as when merging local branches.
+The above two steps are usually performed immediately after each other, so they have been combined into one command:
 ```
-git pull [skrót] [branch]
+git pull [shortcut] [branch]
 ```
-To polecenie jest równoznaczne z pobraniem najnowszych zmian z globalnego repozytorium, którego skróconą nazwę należy podać w miejscu [skrót] - oraz zmerge’owaniem ich do lokalnego brancha (należy wskazać nazwę gałęzi).
+This command is equivalent to downloading the latest changes from the global repository, the short name of which should be given in place of [shortcut] - and merging them into the local branch (the branch name must be indicated).
 
 <br>![picture](images/Picture49.png)
 
-### 3.5.4. Wysyłanie lokalnych zmian do repozytorium globalnego
-Jeżeli dokonane zostały zmiany w lokalnej wersji repozytorium i chcemy je wysłać na zewnątrz (do globalnego repozytorium), użyjemy komendy:
+### 3.5.4. Sending local changes to the global repository
+If changes have been made to the local version of the repository and we want to send them externally (to the global repository), we will use the command:
 ```
-git push [skrót] [branch]
+git push [shortcut] [branch]
 ```
 
 <br>![picture](images/Picture50.png)
 
-Nadpisanie zmian w zdalnym repozytorium powiedzie się tylko, jeżeli od czasu ostatniego pobierania zmian z zewnątrz, nikt nie dodał swoich zmian. Jeżeli już do tego doszło, musimy najpierw takie zmiany pobrać i połączyć je ze swoimi.
+Overwriting the changes in the remote repository will only succeed if no one has added their changes since the last time the changes were downloaded from outside. If this has already happened, we must first download such changes and combine them with our own.
 
-### 3.5.5. Klonowanie zdalnego repozytorium
-Jeżeli chcemy uzyskać kopię istniejącego już repozytorium GITa - na przykład projektu, w którym chcemy zacząć się udzielać i wprowadzać własne zmiany – niezbędnym poleceniem będzie
+### 3.5.5. Cloning a remote repository
+If we want to obtain a copy of an existing GIT repository - for example, a project in which we want to start contributing and introduce our own changes - the necessary command will be
 ```
 git clone [url]
 ```
-Po wykonaniu polecenia git clone zostanie pobrana każda rewizja, każdego pliku w historii projektu. W praktyce nawet jeśli dysk serwera zostanie uszkodzony, możemy użyć któregokolwiek z dostępnych klonów aby przywrócić serwer do stanu w jakim był w momencie klonowania.
+After executing the git clone command, every revision of every file in the project history will be downloaded. In practice, even if the server disk is damaged, we can use any of the available clones to restore the server to the state it was in at the time of cloning.
 
 <br>![picture](images/Picture51.png)
 
-### 3.5.6. Inicjalizacja zdalnego repozytorium
-Do inicjalizacji zdalnego repozytorium służy polecenie
+### 3.5.6. Initializing the remote repository
+The command is used to initialize the remote repository
 ```
-git init --bare [ścieżka]
+git init --bare [path]
 ```
 <br>![picture](images/Picture52.png)
 
-Powyższe polecenie tworzy katalog repozytorium zdalnego wraz w odpowiednią jego zawartością.
-Jeżeli znajdujemy się w katalogu, który ma być repozytorium zdalnym – wówczas nie podajemy ścieżki.
-Aby lepiej zrozumieć czym jest zdalne repozytorium i jak działa, utworzymy 3 katalogi – pierwszy będzie pełnił funkcję naszego zdalnego repozytorium, zaś dwa pozostałe będą repozytoriami lokalnymi. Jak łatwo zauważyć wszystkie katalogi będą znajdować się na tym samym komputerze, który będzie jednocześnie pełnił rolę serwera oraz lokalnego komputera.
+The above command creates the remote repository directory along with its appropriate contents.
+If we are in a directory that is to be a remote repository, we do not provide the path.
+To better understand what a remote repository is and how it works, we will create 3 directories - the first one will act as our remote repository, and the other two will be local repositories. As you can easily see, all directories will be located on the same computer, which will also act as a server and a local computer.
