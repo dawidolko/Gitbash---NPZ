@@ -1,0 +1,19 @@
+diff --git a/lokomotywa.txt b/lokomotywa.txt
+index 5c93880..48c36a1 100644
+--- a/lokomotywa.txt
++++ b/lokomotywa.txt
+@@ -3,7 +3,7 @@ Heavy, huge and sweat dripping from her:
+Fatty oil.
+She stands and gasps, pants and blows,
+Heat from her heated belly bursts:
+
+-Buch - how hot!
+-Uch - how hot!
+-Puff - how hot!
+-Uff - how hot!
+\ No newline at end of file
++Buch - how cold!
++Uch - how cold!
++Puff - how cold!
++Uff - how cold!
+\ No newline at end of file

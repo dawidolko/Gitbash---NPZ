@@ -1,12 +1,12 @@
-Linia 1
+Line 1
 <<<<<<< HEAD
-Poprawka HotFix
-Poprawka HotFix
-Linia 2.
-Linia 3.
+HotFix
+HotFix
+Line 2.
+Line 3.
 =======
-Linia 2
-Linia 3
-funkcjonalnosc w branchu feature
-zakonczenie funkcjonalnosci feature.
+Line 2
+Line 3
+functionality in the feature branch
+end of feature functionality.
 >>>>>>> feature

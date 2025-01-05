@@ -1,0 +1,1 @@
+The file garbage.doc is missing because it has been added to .gitignore and is ignored by Git.

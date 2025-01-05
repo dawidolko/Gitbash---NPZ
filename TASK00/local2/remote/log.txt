@@ -1,11 +1,11 @@
 commit ae61e2ff857446101658f92620f576ab0249590c
 Author: nullfresh <dawidolko@outlook.com>
-Date:   Tue May 30 10:42:19 2023 +0200
+Date: Tue May 30 10:42:19 2023 +0200
 
-    ignorowanie .doc
+ ignoring .doc
 
 commit a161360a4703dfdeb40aecf1dd3a75c907511f8c
 Author: nullfresh <dawidolko@outlook.com>
-Date:   Tue May 30 10:41:24 2023 +0200
+Date: Tue May 30 10:41:24 2023 +0200
 
-    ryba
+ fish

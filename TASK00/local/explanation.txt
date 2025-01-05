@@ -1,0 +1,2 @@
+file 'garbage.doc' is missing because file '.doc' has been added to '.git' and is ignored by git > explanation.txt
+git add explanation.txt
