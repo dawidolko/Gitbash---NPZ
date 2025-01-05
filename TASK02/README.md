@@ -16,7 +16,7 @@ Go to the remote folder and create a clean remote repository with the command: g
 
 Go back to local and create a file called Cebula.txt and put the text in it (Polish characters are not necessary):
 
-````
+```
 An onion is different.
 It has no insides.
 It is itself through and through, an onion
@@ -24,7 +24,8 @@ to the point of onionness.
 Onion-like on the outside,
 onion-like to the core,
 an onion could look into itself
-without being terrified. ```
+without being terrified.
+```
 
 ### **Task 5.**
 Add a new file to the repository and commit with the description "onion".
@@ -58,8 +59,8 @@ Navigate to the local2 directory and clone the contents of the remote repository
 
 ### **Task 15.**
 Add another verse to the Cebula.txt file (in the local2/remote directory):
-````
 
+```
 There is foreignness and wildness within us
 barely covered with skin,
 inferno in us internal medicine,
@@ -68,8 +69,8 @@ and onion in onion,
 not twisted gut.
 She is naked many times,
 profoundly similar.
-
 ```
+
 ### **Task 16.**
 Save the changes locally with the description "second verse" and then send them to remote.
 
@@ -99,8 +100,8 @@ Unmerge the Cebula.txt file and return it to its state of two verses without car
 
 ### **Task 25.**
 Add the third verse, save it and send it to remote:
-```
 
+```
 Being consistent, onion,
 successful onion creation.
 In one simply the second,
@@ -109,11 +110,10 @@ and in the next another,`
 that is the third and fourth.
 Centripetal fugue.
 Echo composed in a choir.
-
 ```
+
 ### **Task 26.**
 Go to the local2/remote folder and add "Ah, that onion!" at the end of the file.
 
 ### **Task 27.**
 Pack the entire folder named after your name and surname and upload it to Moodle.
-```
