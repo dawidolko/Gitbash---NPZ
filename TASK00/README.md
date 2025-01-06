@@ -61,7 +61,7 @@ Update the remote repository.
 
 Replace the words "fish" with "cod" in the River.txt file.
 
-### **Task 13. **
+### **Task 13.**
 
 Generate a file called roznica.txt containing the differences from
 the original file.
